@@ -1,0 +1,197 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Syne", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-forest: #183c2b;
+  --color-moss: #738b5b;
+  --color-terracotta: #d46f4c;
+  --color-sand: #e8dcc6;
+  --color-warm-yellow: #e3b84b;
+  --color-anthracite: #171a18;
+  --color-offwhite: #f7f5ef;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: #0d120f;
+  --foreground: #f7f5ef;
+  --card: #141b16;
+  --card-foreground: #f7f5ef;
+  --popover: #141b16;
+  --popover-foreground: #f7f5ef;
+  --primary: #738b5b;
+  --primary-foreground: #0d120f;
+  --secondary: #1a241e;
+  --secondary-foreground: #f7f5ef;
+  --muted: #1e2821;
+  --muted-foreground: #9eaba2;
+  --accent: #d46f4c;
+  --accent-foreground: #ffffff;
+  --destructive: #b91c1c;
+  --destructive-foreground: #f7f5ef;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #738b5b;
+}
+
+.dark {
+  --background: #0d120f;
+  --foreground: #f7f5ef;
+  --card: #141b16;
+  --card-foreground: #f7f5ef;
+  --popover: #141b16;
+  --popover-foreground: #f7f5ef;
+  --primary: #738b5b;
+  --primary-foreground: #0d120f;
+  --secondary: #1a241e;
+  --secondary-foreground: #f7f5ef;
+  --muted: #1e2821;
+  --muted-foreground: #9eaba2;
+  --accent: #d46f4c;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #e3b84b;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #0d120f;
+    color: #f7f5ef;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Rich Architectural Gradients & Croquis Patterns */
+.bg-grad-architectural {
+  background: linear-gradient(155deg, #0d1310 0%, #14241b 45%, #0e1511 100%);
+}
+
+.bg-grad-forest {
+  background: linear-gradient(135deg, #0c1812 0%, #183c2b 50%, #101c15 100%);
+}
+
+.bg-grad-emerald {
+  background: linear-gradient(140deg, #0d1e15 0%, #1d3b2c 55%, #111e17 100%);
+}
+
+.bg-grad-glow {
+  background: radial-gradient(ellipse at 50% 0%, rgba(115, 139, 91, 0.28) 0%, transparent 70%);
+}
+
+.bg-grad-terracotta-glow {
+  background: radial-gradient(circle at 80% 20%, rgba(212, 111, 76, 0.2) 0%, transparent 60%);
+}
+
+.bg-grad-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+/* Blueprint & Croquis Grid Overlays */
+.croquis-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 3rem 3rem;
+}
+
+.croquis-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Architectural & Organic Shapes */
+.organic-shape-1 {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.organic-shape-2 {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.curved-edge-b {
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}
+
+.curved-edge-t {
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .curved-edge-b {
+    border-bottom-left-radius: 6rem;
+    border-bottom-right-radius: 6rem;
+  }
+  .curved-edge-t {
+    border-top-left-radius: 6rem;
+    border-top-right-radius: 6rem;
+  }
+}
+
+.bg-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
