@@ -116,7 +116,7 @@ function Home() {
   const activeMockup = heroProjects[mockupIndex]!;
 
   return (
-    <div className="bg-[#0d120f] text-offwhite selection:bg-terracotta selection:text-white">
+    <div className="bg-[#151a17] text-offwhite selection:bg-terracotta selection:text-white">
       {/* 1. HERO SECTION WITH CINEMATIC PROJECT SLIDER & TOPO CONTOURS */}
       <section className="relative h-[100svh] min-h-[680px] w-full overflow-hidden bg-anthracite text-offwhite">
         {/* Slider Media Layers (Crossfade) */}
@@ -149,8 +149,8 @@ function Home() {
         })}
 
         {/* Cinematic Multi-stop Dark & Forest Gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0d120f] via-black/40 to-[#0d120f]/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d120f]/80 via-transparent to-[#0d120f]/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#151a17] via-black/40 to-[#151a17]/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#151a17]/80 via-transparent to-[#151a17]/60" />
 
         {/* Topographic Contour Overlay on Hero */}
         <TopoContourBackground opacity={0.2} />
@@ -260,7 +260,7 @@ function Home() {
       </section>
 
       {/* 2. MANIFESTO & CROQUIS SKETCH SECTION (RICH ARCHITECTURAL GRADIENT) */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#0d120f] via-[#122018] to-[#0d120f] py-28 lg:py-36">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#151a17] via-[#122018] to-[#151a17] py-28 lg:py-36">
         {/* Dynamic Topo Contour Lines */}
         <TopoContourBackground opacity={0.3} />
 
@@ -330,7 +330,7 @@ function Home() {
       </section>
 
       {/* 3. FEATURED PROJECTS (EDITORIAL ASYMMETRIC GRID WITH BLUEPRINT AURA) */}
-      <section className="relative overflow-hidden bg-[#0d120f] py-28 lg:py-36">
+      <section className="relative overflow-hidden bg-[#151a17] py-28 lg:py-36">
         <div className="pointer-events-none absolute inset-0 croquis-grid opacity-30" />
         <div className="pointer-events-none absolute right-10 top-1/4 h-96 w-96 rounded-full bg-forest/25 blur-3xl" />
 
@@ -564,7 +564,7 @@ function Home() {
       <ProjectCatalog />
 
       {/* 5. LAPTOP & PHONE EXPERIENCE SECTION (DARK ANTHRACITE ATMOSPHERE) */}
-      <section className="relative overflow-hidden bg-[#0d120f] py-28 text-offwhite lg:py-36">
+      <section className="relative overflow-hidden bg-[#151a17] py-28 text-offwhite lg:py-36">
         <div className="pointer-events-none absolute -left-40 top-1/4 h-96 w-96 rounded-full bg-forest/20 blur-3xl" />
         <div className="pointer-events-none absolute -right-40 bottom-1/4 h-96 w-96 rounded-full bg-terracotta/20 blur-3xl" />
 
@@ -616,7 +616,7 @@ function Home() {
       </section>
 
       {/* 6. SERVICES SECTION (RICH ARCHITECTURAL GRADIENT ATMOSPHERE) */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#0d120f] via-[#121f17] to-[#0d120f] py-28 text-offwhite lg:py-36">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#151a17] via-[#121f17] to-[#151a17] py-28 text-offwhite lg:py-36">
         <TopoContourBackground opacity={0.15} />
 
         <div className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-10">
@@ -659,7 +659,7 @@ function Home() {
       </section>
 
       {/* 7. SUSTAINABILITY, STATS & SECTION CROQUIS */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#0d120f] via-[#15271e] to-[#0d120f] py-28 text-offwhite lg:py-36">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#151a17] via-[#15271e] to-[#151a17] py-28 text-offwhite lg:py-36">
         <div className="pointer-events-none absolute -right-40 top-1/4 h-96 w-96 rounded-full bg-moss/20 blur-3xl" />
 
         <div className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-10">

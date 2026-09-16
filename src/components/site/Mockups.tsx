@@ -27,24 +27,24 @@ export function LaptopMockup({ project, src, poster, className }: LaptopMockupPr
           muted
           loop
           playsInline
-          className="h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
         />
       ) : (
         <img
           src={imagePoster}
           alt={project?.title || ""}
-          className="h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
           loading="lazy"
         />
       )}
 
       {/* Screen Glare & Lighting Overlay */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/60 via-black/20 to-transparent" />
-      <div className="pointer-events-none absolute -inset-full rotate-45 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/60 via-black/20 to-transparent z-10" />
+      <div className="pointer-events-none absolute -inset-full rotate-45 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100 z-10" />
 
       {/* Project Metadata Overlay inside screen */}
       {project && (
-        <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4 sm:p-6 lg:p-7">
+        <div className="absolute inset-x-0 bottom-0 z-20 flex items-end justify-between p-4 sm:p-6 lg:p-7">
           <div className="space-y-1 text-left">
             <span className="inline-block rounded-full bg-forest/80 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-sand backdrop-blur-md">
               {project.category} · {project.year}
@@ -73,7 +73,7 @@ export function LaptopMockup({ project, src, poster, className }: LaptopMockupPr
         <div className="absolute left-1/2 top-2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-black/60 ring-1 ring-white/10" />
 
         {slug ? (
-          <Link to="/projeler/$slug" params={{ slug }} className="block focus:outline-none">
+          <Link to="/projeler/$slug" params={{ slug }} className="block h-full w-full focus:outline-none">
             {content}
           </Link>
         ) : (
@@ -119,19 +119,19 @@ export function PhoneMockup({ project, src, poster, className }: PhoneMockupProp
           muted
           loop
           playsInline
-          className="h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
         />
       ) : (
         <img
           src={imagePoster}
           alt={project?.title || ""}
-          className="h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
           loading="lazy"
         />
       )}
 
       {/* Subtle phone screen gradient */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/30" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/30 z-10" />
 
       {/* Bottom Metadata & Home Indicator */}
       <div className="absolute inset-x-0 bottom-0 z-20 p-4 text-left">
@@ -157,10 +157,10 @@ export function PhoneMockup({ project, src, poster, className }: PhoneMockupProp
       )}
     >
       {/* Subtle outer metallic rim highlight */}
-      <div className="absolute -inset-px rounded-[40px] border border-white/15 pointer-events-none" />
+      <div className="absolute -inset-px rounded-[40px] border border-white/15 pointer-events-none z-10" />
 
       {slug ? (
-        <Link to="/projeler/$slug" params={{ slug }} className="block focus:outline-none">
+        <Link to="/projeler/$slug" params={{ slug }} className="block h-full w-full focus:outline-none">
           {content}
         </Link>
       ) : (

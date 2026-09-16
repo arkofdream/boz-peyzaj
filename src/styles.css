@@ -48,17 +48,17 @@
 
 :root {
   --radius: 0.75rem;
-  --background: #0d120f;
+  --background: #151a17;
   --foreground: #f7f5ef;
-  --card: #141b16;
+  --card: #1c241f;
   --card-foreground: #f7f5ef;
-  --popover: #141b16;
+  --popover: #1c241f;
   --popover-foreground: #f7f5ef;
   --primary: #738b5b;
-  --primary-foreground: #0d120f;
-  --secondary: #1a241e;
+  --primary-foreground: #151a17;
+  --secondary: #222d26;
   --secondary-foreground: #f7f5ef;
-  --muted: #1e2821;
+  --muted: #26332a;
   --muted-foreground: #9eaba2;
   --accent: #d46f4c;
   --accent-foreground: #ffffff;
@@ -70,17 +70,17 @@
 }
 
 .dark {
-  --background: #0d120f;
+  --background: #151a17;
   --foreground: #f7f5ef;
-  --card: #141b16;
+  --card: #1c241f;
   --card-foreground: #f7f5ef;
-  --popover: #141b16;
+  --popover: #1c241f;
   --popover-foreground: #f7f5ef;
   --primary: #738b5b;
-  --primary-foreground: #0d120f;
-  --secondary: #1a241e;
+  --primary-foreground: #151a17;
+  --secondary: #222d26;
   --secondary-foreground: #f7f5ef;
-  --muted: #1e2821;
+  --muted: #26332a;
   --muted-foreground: #9eaba2;
   --accent: #d46f4c;
   --accent-foreground: #ffffff;
@@ -102,7 +102,7 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #0d120f;
+    background-color: #151a17;
     color: #f7f5ef;
   }
 
