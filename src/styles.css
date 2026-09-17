@@ -16,13 +16,17 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
 
-  --color-forest: #183c2b;
-  --color-moss: #738b5b;
-  --color-terracotta: #d46f4c;
-  --color-sand: #e8dcc6;
-  --color-warm-yellow: #e3b84b;
-  --color-anthracite: #171a18;
-  --color-offwhite: #f7f5ef;
+  --color-forest: var(--forest);
+  --color-moss: var(--moss);
+  --color-terracotta: var(--terracotta);
+  --color-sand: var(--sand);
+  --color-warm-yellow: var(--warm-yellow);
+  --color-anthracite: var(--anthracite);
+  --color-offwhite: var(--offwhite);
+  --color-device-edge: var(--device-edge);
+  --color-device-highlight: var(--device-highlight);
+  --color-device-silver: var(--device-silver);
+  --color-on-image: var(--on-image);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -48,47 +52,59 @@
 
 :root {
   --radius: 0.75rem;
-  --background: #151a17;
-  --foreground: #f7f5ef;
-  --card: #1c241f;
-  --card-foreground: #f7f5ef;
-  --popover: #1c241f;
-  --popover-foreground: #f7f5ef;
-  --primary: #738b5b;
-  --primary-foreground: #151a17;
-  --secondary: #222d26;
-  --secondary-foreground: #f7f5ef;
-  --muted: #26332a;
-  --muted-foreground: #9eaba2;
-  --accent: #d46f4c;
-  --accent-foreground: #ffffff;
-  --destructive: #b91c1c;
-  --destructive-foreground: #f7f5ef;
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.15);
-  --ring: #738b5b;
+  --background: oklch(0.97 0.018 92);
+  --foreground: oklch(0.27 0.035 151);
+  --card: oklch(0.995 0.008 90);
+  --card-foreground: oklch(0.27 0.035 151);
+  --popover: oklch(0.995 0.008 90);
+  --popover-foreground: oklch(0.27 0.035 151);
+  --primary: oklch(0.42 0.09 150);
+  --primary-foreground: oklch(0.985 0.01 90);
+  --secondary: oklch(0.92 0.035 126);
+  --secondary-foreground: oklch(0.31 0.06 148);
+  --muted: oklch(0.93 0.018 90);
+  --muted-foreground: oklch(0.48 0.03 145);
+  --accent: oklch(0.62 0.145 42);
+  --accent-foreground: oklch(0.99 0.008 90);
+  --destructive: oklch(0.55 0.2 26);
+  --destructive-foreground: oklch(0.99 0.008 90);
+  --border: oklch(0.83 0.03 116);
+  --input: oklch(0.87 0.025 110);
+  --ring: oklch(0.52 0.09 150);
+  --forest: oklch(0.42 0.09 150);
+  --moss: oklch(0.57 0.1 130);
+  --terracotta: oklch(0.62 0.145 42);
+  --sand: oklch(0.91 0.045 88);
+  --warm-yellow: oklch(0.76 0.13 80);
+  --anthracite: oklch(0.23 0.025 155);
+  --offwhite: oklch(0.985 0.01 90);
+  --on-image: oklch(0.995 0.004 90);
+  --device-edge: oklch(0.5 0.015 155);
+  --device-highlight: oklch(0.43 0.015 155);
+  --device-silver: oklch(0.68 0.012 155);
+  --shadow-device: 0 25px 60px -15px oklch(0.2 0.02 155 / 0.45);
 }
 
 .dark {
-  --background: #151a17;
-  --foreground: #f7f5ef;
-  --card: #1c241f;
-  --card-foreground: #f7f5ef;
-  --popover: #1c241f;
-  --popover-foreground: #f7f5ef;
-  --primary: #738b5b;
-  --primary-foreground: #151a17;
-  --secondary: #222d26;
-  --secondary-foreground: #f7f5ef;
-  --muted: #26332a;
-  --muted-foreground: #9eaba2;
-  --accent: #d46f4c;
-  --accent-foreground: #ffffff;
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.15);
-  --ring: #e3b84b;
+  --background: oklch(0.97 0.018 92);
+  --foreground: oklch(0.27 0.035 151);
+  --card: oklch(0.995 0.008 90);
+  --card-foreground: oklch(0.27 0.035 151);
+  --popover: oklch(0.995 0.008 90);
+  --popover-foreground: oklch(0.27 0.035 151);
+  --primary: oklch(0.42 0.09 150);
+  --primary-foreground: oklch(0.985 0.01 90);
+  --secondary: oklch(0.92 0.035 126);
+  --secondary-foreground: oklch(0.31 0.06 148);
+  --muted: oklch(0.93 0.018 90);
+  --muted-foreground: oklch(0.48 0.03 145);
+  --accent: oklch(0.62 0.145 42);
+  --accent-foreground: oklch(0.99 0.008 90);
+  --destructive: oklch(0.55 0.2 26);
+  --destructive-foreground: oklch(0.99 0.008 90);
+  --border: oklch(0.83 0.03 116);
+  --input: oklch(0.87 0.025 110);
+  --ring: oklch(0.52 0.09 150);
 }
 
 @layer base {
@@ -102,8 +118,8 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #151a17;
-    color: #f7f5ef;
+    background-color: var(--background);
+    color: var(--foreground);
   }
 
   body {
@@ -119,45 +135,50 @@
   h5,
   h6 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
   }
+}
+
+.image-tone {
+  --foreground: var(--offwhite);
+  --primary: var(--sand);
 }
 
 /* Rich Architectural Gradients & Croquis Patterns */
 .bg-grad-architectural {
-  background: linear-gradient(155deg, #0d1310 0%, #14241b 45%, #0e1511 100%);
+  background: linear-gradient(155deg, var(--background), var(--secondary), var(--background));
 }
 
 .bg-grad-forest {
-  background: linear-gradient(135deg, #0c1812 0%, #183c2b 50%, #101c15 100%);
+  background: linear-gradient(135deg, var(--secondary), var(--card), var(--secondary));
 }
 
 .bg-grad-emerald {
-  background: linear-gradient(140deg, #0d1e15 0%, #1d3b2c 55%, #111e17 100%);
+  background: linear-gradient(140deg, var(--background), var(--secondary), var(--card));
 }
 
 .bg-grad-glow {
-  background: radial-gradient(ellipse at 50% 0%, rgba(115, 139, 91, 0.28) 0%, transparent 70%);
+  background: radial-gradient(ellipse at 50% 0%, color-mix(in oklab, var(--moss) 28%, transparent) 0%, transparent 70%);
 }
 
 .bg-grad-terracotta-glow {
-  background: radial-gradient(circle at 80% 20%, rgba(212, 111, 76, 0.2) 0%, transparent 60%);
+  background: radial-gradient(circle at 80% 20%, color-mix(in oklab, var(--terracotta) 20%, transparent) 0%, transparent 60%);
 }
 
 .bg-grad-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+  background: linear-gradient(180deg, var(--card), var(--secondary));
 }
 
 /* Blueprint & Croquis Grid Overlays */
 .croquis-grid {
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, color-mix(in oklab, var(--primary) 10%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--primary) 10%, transparent) 1px, transparent 1px);
   background-size: 3rem 3rem;
 }
 
 .croquis-dots {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(color-mix(in oklab, var(--primary) 18%, transparent) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -192,6 +213,13 @@
 }
 
 .bg-grain {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+  background-image: radial-gradient(color-mix(in oklab, var(--primary) 14%, transparent) 1px, transparent 0);
   background-size: 24px 24px;
+}
+
+.pattern-overlay {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--primary) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--primary) 7%, transparent) 1px, transparent 1px);
+  background-size: 3rem 3rem;
 }
