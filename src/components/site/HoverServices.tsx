@@ -33,7 +33,6 @@ export function HoverServices() {
 
   return (
     <section className="relative py-32 md:py-48 bg-[#1A1F18] text-[#E8E6E1] overflow-hidden">
-      
       {/* Background Images Overlay */}
       <AnimatePresence>
         {hoveredIndex !== null && (
@@ -46,11 +45,11 @@ export function HoverServices() {
             className="absolute inset-0 pointer-events-none"
           >
             {/* If actual images don't exist, we can use gradient or dummy images. For this example, we use a generic abstract gradient based on index as fallback */}
-            <div 
+            <div
               className="w-full h-full bg-cover bg-center"
               style={{
                 backgroundImage: `url(${services[hoveredIndex]?.image})`,
-                backgroundColor: hoveredIndex % 2 === 0 ? "#2C332A" : "#3B4D45" // fallback
+                backgroundColor: hoveredIndex % 2 === 0 ? "#2C332A" : "#3B4D45", // fallback
               }}
             />
           </motion.div>
@@ -61,10 +60,10 @@ export function HoverServices() {
         <h2 className="text-sm font-mono tracking-[0.3em] uppercase mb-16 text-[#A66E4E]">
           Uzmanlık Alanlarımız
         </h2>
-        
+
         <div className="flex flex-col border-t border-white/20">
           {services.map((s, i) => (
-            <div 
+            <div
               key={s.n}
               className="group relative border-b border-white/20 py-8 md:py-12 cursor-pointer transition-colors hover:bg-white/5"
               onMouseEnter={() => setHoveredIndex(i)}
@@ -79,7 +78,7 @@ export function HoverServices() {
                     {s.t}
                   </h3>
                 </div>
-                
+
                 <div className="md:max-w-xs overflow-hidden h-0 md:h-auto opacity-0 md:opacity-100 group-hover:opacity-100 transition-all duration-500">
                   <p className="text-white/70 text-sm md:text-base leading-relaxed transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     {s.d}

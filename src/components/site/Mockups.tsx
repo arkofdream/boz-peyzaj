@@ -117,7 +117,11 @@ export function LaptopMockup({ project, src, poster, className }: LaptopMockupPr
         <div className="absolute left-1/2 top-2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-anthracite/60 ring-1 ring-white/10" />
 
         {slug ? (
-          <Link to="/projeler/$slug" params={{ slug }} className="block h-full w-full focus:outline-none">
+          <Link
+            to="/projeler/$slug"
+            params={{ slug }}
+            className="block h-full w-full focus:outline-none"
+          >
             {content}
           </Link>
         ) : (
@@ -169,7 +173,9 @@ export function PhoneMockup({ project, src, poster, className }: PhoneMockupProp
             <span className="inline-block rounded-full bg-terracotta/90 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.18em] text-on-image backdrop-blur-sm">
               {project.category}
             </span>
-            <p className="font-display text-sm font-bold text-on-image drop-shadow">{project.title}</p>
+            <p className="font-display text-sm font-bold text-on-image drop-shadow">
+              {project.title}
+            </p>
             <p className="text-[11px] text-on-image/80">{project.location}</p>
           </div>
         )}
@@ -189,7 +195,11 @@ export function PhoneMockup({ project, src, poster, className }: PhoneMockupProp
       <div className="absolute -inset-px rounded-[40px] border border-on-image/15 pointer-events-none z-10" />
 
       {slug ? (
-        <Link to="/projeler/$slug" params={{ slug }} className="block h-full w-full focus:outline-none">
+        <Link
+          to="/projeler/$slug"
+          params={{ slug }}
+          className="block h-full w-full focus:outline-none"
+        >
           {content}
         </Link>
       ) : (

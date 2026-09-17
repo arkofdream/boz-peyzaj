@@ -47,13 +47,25 @@ export function Header() {
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4.5 lg:px-10">
         <Link to="/" className="group flex flex-col leading-none">
           <div className="flex items-center gap-1.5">
-            <div className="w-8 h-6 mr-1 opacity-80"><BuildingSilhouetteSketch /></div>
-            <span className={cn("font-display text-2xl font-bold tracking-[0.2em] transition-colors duration-300", isLightText ? "text-offwhite" : "text-foreground")}>
+            <div className="w-8 h-6 mr-1 opacity-80">
+              <BuildingSilhouetteSketch />
+            </div>
+            <span
+              className={cn(
+                "font-display text-2xl font-bold tracking-[0.2em] transition-colors duration-300",
+                isLightText ? "text-offwhite" : "text-foreground",
+              )}
+            >
               TERRA
             </span>
             <span className="h-1.5 w-1.5 rounded-full bg-moss transition-transform duration-300 group-hover:scale-150" />
           </div>
-          <span className={cn("mt-1 font-mono text-[9px] font-medium uppercase tracking-[0.45em] transition-colors duration-300", isLightText ? "text-sand/75" : "text-primary/75")}>
+          <span
+            className={cn(
+              "mt-1 font-mono text-[9px] font-medium uppercase tracking-[0.45em] transition-colors duration-300",
+              isLightText ? "text-sand/75" : "text-primary/75",
+            )}
+          >
             Peyzaj Mimarlığı
           </span>
         </Link>
@@ -71,8 +83,12 @@ export function Header() {
                 className={cn(
                   "group relative py-1 text-[12px] font-medium uppercase tracking-[0.22em] transition-colors duration-300",
                   isActive
-                    ? isLightText ? "font-semibold text-offwhite" : "font-semibold text-foreground"
-                    : isLightText ? "text-offwhite/75 hover:text-offwhite" : "text-foreground/70 hover:text-primary",
+                    ? isLightText
+                      ? "font-semibold text-offwhite"
+                      : "font-semibold text-foreground"
+                    : isLightText
+                      ? "text-offwhite/75 hover:text-offwhite"
+                      : "text-foreground/70 hover:text-primary",
                 )}
               >
                 {item.label}
@@ -91,7 +107,12 @@ export function Header() {
         <div className="flex items-center gap-4">
           <Link
             to="/iletisim"
-            className={cn("hidden items-center gap-2 rounded-full px-5 py-2.5 text-[11px] font-medium uppercase tracking-[0.22em] backdrop-blur-sm transition-all duration-300 sm:inline-flex", isLightText ? "border border-offwhite/20 bg-anthracite/20 text-offwhite hover:bg-forest" : "border border-border bg-card/80 text-foreground hover:border-primary hover:text-primary")}
+            className={cn(
+              "hidden items-center gap-2 rounded-full px-5 py-2.5 text-[11px] font-medium uppercase tracking-[0.22em] backdrop-blur-sm transition-all duration-300 sm:inline-flex",
+              isLightText
+                ? "border border-offwhite/20 bg-anthracite/20 text-offwhite hover:bg-forest"
+                : "border border-border bg-card/80 text-foreground hover:border-primary hover:text-primary",
+            )}
           >
             <span>Proje Başlat</span>
             <ArrowUpRight size={14} />
@@ -101,7 +122,10 @@ export function Header() {
             type="button"
             aria-label="Menü"
             onClick={() => setOpen((v) => !v)}
-            className={cn("p-1.5 transition-colors md:hidden", isLightText ? "text-offwhite" : "text-foreground")}
+            className={cn(
+              "p-1.5 transition-colors md:hidden",
+              isLightText ? "text-offwhite" : "text-foreground",
+            )}
           >
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>

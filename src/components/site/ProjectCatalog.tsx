@@ -206,7 +206,9 @@ export function ProjectCatalog() {
                           key={pl.name}
                           className="rounded-lg bg-card/90 p-2.5 text-left border border-on-image/5"
                         >
-                          <p className="font-display text-xs font-semibold text-on-image">{pl.name}</p>
+                          <p className="font-display text-xs font-semibold text-on-image">
+                            {pl.name}
+                          </p>
                           <p className="italic text-[10px] text-moss">{pl.botanical}</p>
                           <span className="mt-1 inline-block rounded bg-secondary px-1.5 py-0.5 font-mono text-[9px] text-primary/80">
                             {pl.tag}
@@ -403,7 +405,10 @@ export function ProjectCatalog() {
                     </p>
                     <div className="grid gap-2 sm:grid-cols-2">
                       {currentTemplate.features.map((feat) => (
-                        <div key={feat} className="flex items-start gap-2 text-xs text-foreground/85">
+                        <div
+                          key={feat}
+                          className="flex items-start gap-2 text-xs text-foreground/85"
+                        >
                           <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-moss" />
                           <span>{feat}</span>
                         </div>

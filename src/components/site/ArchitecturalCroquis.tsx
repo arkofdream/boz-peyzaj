@@ -94,20 +94,22 @@ export function TopoContourBackground({
         />
 
         {/* Blueprint coordinate grid crosses (+) */}
-        {([
-          [160, 180],
-          [520, 180],
-          [880, 180],
-          [1240, 180],
-          [160, 480],
-          [520, 480],
-          [880, 480],
-          [1240, 480],
-          [160, 780],
-          [520, 780],
-          [880, 780],
-          [1240, 780],
-        ] satisfies Array<[number, number]>).map(([cx, cy], i) => (
+        {(
+          [
+            [160, 180],
+            [520, 180],
+            [880, 180],
+            [1240, 180],
+            [160, 480],
+            [520, 480],
+            [880, 480],
+            [1240, 480],
+            [160, 780],
+            [520, 780],
+            [880, 780],
+            [1240, 780],
+          ] satisfies Array<[number, number]>
+        ).map(([cx, cy], i) => (
           <g key={i} stroke="currentColor" strokeWidth="1" opacity="0.4">
             <line x1={cx - 8} y1={cy} x2={cx + 8} y2={cy} />
             <line x1={cx} y1={cy - 8} x2={cx} y2={cy + 8} />
@@ -569,61 +571,217 @@ export function ElevationSectionCroquis({ className = "" }: { className?: string
 }
 
 // 5. BUILDING SILHOUETTE SKETCH (Bina Silueti Eskizi / Logo İbaresi)
-export function BuildingSilhouetteSketch({ className = '' }: { className?: string }) {
+export function BuildingSilhouetteSketch({ className = "" }: { className?: string }) {
   return (
     <div className={"opacity-80 mix-blend-multiply dark:mix-blend-screen " + className}>
-      <svg viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-foreground/40">
+      <svg
+        viewBox="0 0 400 150"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full text-foreground/40"
+      >
         {/* Ground Line */}
-        <line x1="20" y1="130" x2="380" y2="130" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        
+        <line
+          x1="20"
+          y1="130"
+          x2="380"
+          y2="130"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+
         {/* Modern Villa Silhouette / Lines */}
-        <rect x="120" y="70" width="120" height="60" stroke="currentColor" strokeWidth="1.5" fill="none" />
-        <rect x="140" y="50" width="160" height="20" stroke="currentColor" strokeWidth="1.5" fill="none" />
-        
+        <rect
+          x="120"
+          y="70"
+          width="120"
+          height="60"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          fill="none"
+        />
+        <rect
+          x="140"
+          y="50"
+          width="160"
+          height="20"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          fill="none"
+        />
+
         {/* Overhanging Roof */}
         <line x1="110" y1="70" x2="260" y2="70" stroke="currentColor" strokeWidth="2" />
         <line x1="130" y1="50" x2="320" y2="50" stroke="currentColor" strokeWidth="2" />
-        
+
         {/* Vertical details / Columns */}
-        <line x1="160" y1="70" x2="160" y2="130" stroke="currentColor" strokeWidth="1" opacity="0.6" />
-        <line x1="200" y1="70" x2="200" y2="130" stroke="currentColor" strokeWidth="1" opacity="0.6" />
-        
+        <line
+          x1="160"
+          y1="70"
+          x2="160"
+          y2="130"
+          stroke="currentColor"
+          strokeWidth="1"
+          opacity="0.6"
+        />
+        <line
+          x1="200"
+          y1="70"
+          x2="200"
+          y2="130"
+          stroke="currentColor"
+          strokeWidth="1"
+          opacity="0.6"
+        />
+
         {/* Abstract Tree Silhouette */}
-        <path d="M60,130 Q60,90 80,70 T100,50 Q110,70 90,90 T80,130" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.7" />
-        <circle cx="85" cy="65" r="25" stroke="currentColor" strokeWidth="1" fill="none" strokeDasharray="3 2" />
-        
+        <path
+          d="M60,130 Q60,90 80,70 T100,50 Q110,70 90,90 T80,130"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          fill="none"
+          opacity="0.7"
+        />
+        <circle
+          cx="85"
+          cy="65"
+          r="25"
+          stroke="currentColor"
+          strokeWidth="1"
+          fill="none"
+          strokeDasharray="3 2"
+        />
+
         {/* Minimal Birds or Scale figures */}
-        <path d="M 280 40 Q 285 35 290 40 Q 295 35 300 40" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.5" />
-        <path d="M 295 25 Q 300 20 305 25 Q 310 20 315 25" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.4" />
+        <path
+          d="M 280 40 Q 285 35 290 40 Q 295 35 300 40"
+          stroke="currentColor"
+          strokeWidth="1"
+          fill="none"
+          opacity="0.5"
+        />
+        <path
+          d="M 295 25 Q 300 20 305 25 Q 310 20 315 25"
+          stroke="currentColor"
+          strokeWidth="1"
+          fill="none"
+          opacity="0.4"
+        />
 
         {/* Dimension/Technical marks */}
-        <line x1="120" y1="140" x2="240" y2="140" stroke="currentColor" strokeWidth="0.5" opacity="0.5" />
-        <line x1="120" y1="138" x2="120" y2="142" stroke="currentColor" strokeWidth="0.5" opacity="0.5" />
-        <line x1="240" y1="138" x2="240" y2="142" stroke="currentColor" strokeWidth="0.5" opacity="0.5" />
+        <line
+          x1="120"
+          y1="140"
+          x2="240"
+          y2="140"
+          stroke="currentColor"
+          strokeWidth="0.5"
+          opacity="0.5"
+        />
+        <line
+          x1="120"
+          y1="138"
+          x2="120"
+          y2="142"
+          stroke="currentColor"
+          strokeWidth="0.5"
+          opacity="0.5"
+        />
+        <line
+          x1="240"
+          y1="138"
+          x2="240"
+          y2="142"
+          stroke="currentColor"
+          strokeWidth="0.5"
+          opacity="0.5"
+        />
       </svg>
     </div>
   );
 }
 // 6. TREE CLUSTER SKETCH (Vektörel Ağaç Çizimleri)
-export function TreeClusterSketch({ className = '' }: { className?: string }) {
+export function TreeClusterSketch({ className = "" }: { className?: string }) {
   return (
     <div className={"opacity-60 mix-blend-multiply dark:mix-blend-screen " + className}>
-      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-foreground/30">
+      <svg
+        viewBox="0 0 200 200"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full text-foreground/30"
+      >
         {/* Tree 1 */}
-        <path d="M100,180 C100,140 100,100 100,60" stroke="currentColor" strokeWidth="2" strokeDasharray="6 3" />
-        <circle cx="100" cy="80" r="50" stroke="currentColor" strokeWidth="1.5" fill="none" strokeDasharray="8 4" />
-        <circle cx="100" cy="80" r="40" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.5" />
-        
+        <path
+          d="M100,180 C100,140 100,100 100,60"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeDasharray="6 3"
+        />
+        <circle
+          cx="100"
+          cy="80"
+          r="50"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          fill="none"
+          strokeDasharray="8 4"
+        />
+        <circle
+          cx="100"
+          cy="80"
+          r="40"
+          stroke="currentColor"
+          strokeWidth="1"
+          fill="none"
+          opacity="0.5"
+        />
+
         {/* Tree 2 */}
-        <path d="M150,190 C150,160 150,130 150,100" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 2" opacity="0.8" />
-        <circle cx="150" cy="110" r="35" stroke="currentColor" strokeWidth="1.2" fill="none" strokeDasharray="5 3" opacity="0.8" />
-        
+        <path
+          d="M150,190 C150,160 150,130 150,100"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeDasharray="4 2"
+          opacity="0.8"
+        />
+        <circle
+          cx="150"
+          cy="110"
+          r="35"
+          stroke="currentColor"
+          strokeWidth="1.2"
+          fill="none"
+          strokeDasharray="5 3"
+          opacity="0.8"
+        />
+
         {/* Tree 3 */}
-        <path d="M50,170 C50,140 50,110 50,80" stroke="currentColor" strokeWidth="1.5" opacity="0.7" />
-        <path d="M20,90 Q50,40 80,90 Q50,120 20,90 Z" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.7" />
-        
+        <path
+          d="M50,170 C50,140 50,110 50,80"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          opacity="0.7"
+        />
+        <path
+          d="M20,90 Q50,40 80,90 Q50,120 20,90 Z"
+          stroke="currentColor"
+          strokeWidth="1"
+          fill="none"
+          opacity="0.7"
+        />
+
         {/* Ground */}
-        <line x1="0" y1="180" x2="200" y2="180" stroke="currentColor" strokeWidth="1" opacity="0.5" strokeDasharray="20 10" />
+        <line
+          x1="0"
+          y1="180"
+          x2="200"
+          y2="180"
+          stroke="currentColor"
+          strokeWidth="1"
+          opacity="0.5"
+          strokeDasharray="20 10"
+        />
       </svg>
     </div>
   );
