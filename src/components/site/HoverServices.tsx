@@ -49,7 +49,7 @@ export function HoverServices() {
             <div 
               className="w-full h-full bg-cover bg-center"
               style={{
-                backgroundImage: `url(${services[hoveredIndex].image})`,
+                backgroundImage: `url(${services[hoveredIndex]?.image})`,
                 backgroundColor: hoveredIndex % 2 === 0 ? "#2C332A" : "#3B4D45" // fallback
               }}
             />
