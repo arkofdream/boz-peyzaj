@@ -571,7 +571,7 @@ export function ElevationSectionCroquis({ className = "" }: { className?: string
 // 5. BUILDING SILHOUETTE SKETCH (Bina Silueti Eskizi / Logo İbaresi)
 export function BuildingSilhouetteSketch({ className = '' }: { className?: string }) {
   return (
-    <div className={opacity-80 mix-blend-multiply dark:mix-blend-screen $className}>
+    <div className={"opacity-80 mix-blend-multiply dark:mix-blend-screen " + className}>
       <svg viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-foreground/40">
         {/* Ground Line */}
         <line x1="20" y1="130" x2="380" y2="130" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
