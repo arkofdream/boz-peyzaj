@@ -1,4 +1,5 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+﻿import { Link, useRouterState } from "@tanstack/react-router";
+import { BuildingSilhouetteSketch } from "./ArchitecturalCroquis";
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -31,7 +32,7 @@ export function Header() {
     setOpen(false);
   }, [currentPath]);
 
-  const isLightText = hasDarkHero && !scrolled;
+  const isLightText = false; // Changed to false to prevent unreadable white text on bright banners
   return (
     <header
       className={cn(
@@ -46,7 +47,7 @@ export function Header() {
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4.5 lg:px-10">
         <Link to="/" className="group flex flex-col leading-none">
           <div className="flex items-center gap-1.5">
-            <span className={cn("font-display text-2xl font-bold tracking-[0.2em] transition-colors duration-300", isLightText ? "text-offwhite" : "text-foreground")}>
+            <div className="w-8 h-6 mr-1 opacity-80"><BuildingSilhouetteSketch /></div>`n            <span className={cn("font-display text-2xl font-bold tracking-[0.2em] transition-colors duration-300", isLightText ? "text-offwhite" : "text-foreground")}>
               TERRA
             </span>
             <span className="h-1.5 w-1.5 rounded-full bg-moss transition-transform duration-300 group-hover:scale-150" />

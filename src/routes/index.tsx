@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, useRef } from "react";
 import { ArrowRight, ArrowUpRight, ChevronRight, Compass, Sparkles } from "lucide-react";
 import { projects, detailImage } from "@/lib/projects";
@@ -9,6 +9,7 @@ import {
   TopoContourBackground,
   MasterplanCroquis,
   ElevationSectionCroquis,
+  BuildingSilhouetteSketch,
   GraphicScaleBar,
 } from "@/components/site/ArchitecturalCroquis";
 

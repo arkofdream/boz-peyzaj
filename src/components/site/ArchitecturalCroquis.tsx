@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 
 /**
  * Architectural Croquis & Topographic Sketch Components
@@ -564,6 +564,43 @@ export function ElevationSectionCroquis({ className = "" }: { className?: string
           </g>
         </svg>
       </div>
+    </div>
+  );
+}
+
+// 5. BUILDING SILHOUETTE SKETCH (Bina Silueti Eskizi / Logo İbaresi)
+export function BuildingSilhouetteSketch({ className = '' }: { className?: string }) {
+  return (
+    <div className={opacity-80 mix-blend-multiply dark:mix-blend-screen $className}>
+      <svg viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-foreground/40">
+        {/* Ground Line */}
+        <line x1="20" y1="130" x2="380" y2="130" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        
+        {/* Modern Villa Silhouette / Lines */}
+        <rect x="120" y="70" width="120" height="60" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        <rect x="140" y="50" width="160" height="20" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        
+        {/* Overhanging Roof */}
+        <line x1="110" y1="70" x2="260" y2="70" stroke="currentColor" strokeWidth="2" />
+        <line x1="130" y1="50" x2="320" y2="50" stroke="currentColor" strokeWidth="2" />
+        
+        {/* Vertical details / Columns */}
+        <line x1="160" y1="70" x2="160" y2="130" stroke="currentColor" strokeWidth="1" opacity="0.6" />
+        <line x1="200" y1="70" x2="200" y2="130" stroke="currentColor" strokeWidth="1" opacity="0.6" />
+        
+        {/* Abstract Tree Silhouette */}
+        <path d="M60,130 Q60,90 80,70 T100,50 Q110,70 90,90 T80,130" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.7" />
+        <circle cx="85" cy="65" r="25" stroke="currentColor" strokeWidth="1" fill="none" strokeDasharray="3 2" />
+        
+        {/* Minimal Birds or Scale figures */}
+        <path d="M 280 40 Q 285 35 290 40 Q 295 35 300 40" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.5" />
+        <path d="M 295 25 Q 300 20 305 25 Q 310 20 315 25" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.4" />
+
+        {/* Dimension/Technical marks */}
+        <line x1="120" y1="140" x2="240" y2="140" stroke="currentColor" strokeWidth="0.5" opacity="0.5" />
+        <line x1="120" y1="138" x2="120" y2="142" stroke="currentColor" strokeWidth="0.5" opacity="0.5" />
+        <line x1="240" y1="138" x2="240" y2="142" stroke="currentColor" strokeWidth="0.5" opacity="0.5" />
+      </svg>
     </div>
   );
 }
