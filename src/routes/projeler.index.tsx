@@ -3,7 +3,10 @@ import { useState } from "react";
 import { ArrowUpRight, BookOpen, Compass, Filter, Layers, Sparkles } from "lucide-react";
 import { projects } from "@/lib/projects";
 import { Reveal } from "@/components/site/Reveal";
-import { BuildingSilhouetteSketch, TreeClusterSketch } from "@/components/site/ArchitecturalCroquis";
+import {
+  BuildingSilhouetteSketch,
+  TreeClusterSketch,
+} from "@/components/site/ArchitecturalCroquis";
 import { ProjectCatalog } from "@/components/site/ProjectCatalog";
 import { TopoContourBackground, GraphicScaleBar } from "@/components/site/ArchitecturalCroquis";
 

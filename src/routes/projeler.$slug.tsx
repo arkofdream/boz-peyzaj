@@ -41,8 +41,8 @@ export const Route = createFileRoute("/projeler/$slug")({
         { title },
         { name: "description", content: p.summary },
         { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: title },
+        { name: "twitter:card", content: "summary_large_image" },
+        { property: "og:title", content: title },
         { property: "og:description", content: p.summary },
       ],
     };
@@ -370,8 +370,11 @@ function ProjectDetail() {
                       Tasarım Prensipleri:
                     </span>
                     <ul className="mt-3 space-y-2">
-                    {matchedTemplate.features.map((feat, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-xs text-foreground/90">
+                      {matchedTemplate.features.map((feat, idx) => (
+                        <li
+                          key={idx}
+                          className="flex items-center gap-2 text-xs text-foreground/90"
+                        >
                           <CheckCircle2 size={13} className="shrink-0 text-warm-yellow" />
                           <span>{feat}</span>
                         </li>
@@ -456,7 +459,10 @@ function ProjectDetail() {
               </p>
             </Reveal>
 
-            <Reveal delay={120} className="mx-auto w-full max-w-[240px] lg:col-span-6 lg:max-w-[280px]">
+            <Reveal
+              delay={120}
+              className="mx-auto w-full max-w-[240px] lg:col-span-6 lg:max-w-[280px]"
+            >
               <PhoneMockup project={project} />
             </Reveal>
           </div>

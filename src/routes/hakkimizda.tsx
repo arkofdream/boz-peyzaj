@@ -81,8 +81,12 @@ function AboutPage() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-background pattern-overlay pt-32 text-foreground lg:pt-40">
       {/* Vector Background Sketches */}
-      <div className="pointer-events-none absolute top-40 -left-20 w-[600px] opacity-10 rotate-[-5deg]"><BuildingSilhouetteSketch /></div>
-      <div className="pointer-events-none absolute bottom-40 -right-20 w-[500px] opacity-10 rotate-[10deg]"><TreeClusterSketch /></div>
+      <div className="pointer-events-none absolute top-40 -left-20 w-[600px] opacity-10 rotate-[-5deg]">
+        <BuildingSilhouetteSketch />
+      </div>
+      <div className="pointer-events-none absolute bottom-40 -right-20 w-[500px] opacity-10 rotate-[10deg]">
+        <TreeClusterSketch />
+      </div>
       <TopoContourBackground opacity={0.25} />
       <div className="pointer-events-none absolute -left-40 top-1/4 h-96 w-96 rounded-full bg-forest/20 blur-3xl" />
       <div className="pointer-events-none absolute -right-40 top-2/3 h-96 w-96 rounded-full bg-terracotta/15 blur-3xl" />

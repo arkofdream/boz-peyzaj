@@ -3,7 +3,10 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { MapPin, Mail, Phone, Clock, Send, Sparkles, CheckCircle2 } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-import { BuildingSilhouetteSketch, TreeClusterSketch } from "@/components/site/ArchitecturalCroquis";
+import {
+  BuildingSilhouetteSketch,
+  TreeClusterSketch,
+} from "@/components/site/ArchitecturalCroquis";
 import { TopoContourBackground, GraphicScaleBar } from "@/components/site/ArchitecturalCroquis";
 
 export const Route = createFileRoute("/iletisim")({
@@ -36,8 +39,12 @@ function ContactPage() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-background pattern-overlay pt-32 text-foreground lg:pt-40">
       {/* Vector Background Sketches */}
-      <div className="pointer-events-none absolute bottom-0 left-0 w-[800px] opacity-15"><TreeClusterSketch /></div>
-      <div className="pointer-events-none absolute top-20 -right-40 w-[600px] opacity-10 rotate-[5deg]"><BuildingSilhouetteSketch /></div>
+      <div className="pointer-events-none absolute bottom-0 left-0 w-[800px] opacity-15">
+        <TreeClusterSketch />
+      </div>
+      <div className="pointer-events-none absolute top-20 -right-40 w-[600px] opacity-10 rotate-[5deg]">
+        <BuildingSilhouetteSketch />
+      </div>
       <TopoContourBackground opacity={0.25} />
       <div className="pointer-events-none absolute -left-40 top-1/4 h-96 w-96 rounded-full bg-forest/20 blur-3xl" />
       <div className="pointer-events-none absolute -right-40 top-2/3 h-96 w-96 rounded-full bg-terracotta/15 blur-3xl" />
@@ -168,7 +175,9 @@ function ContactPage() {
                 className="space-y-6"
               >
                 <div>
-                  <h2 className="font-display text-2xl font-bold text-foreground">Proje Başlatın</h2>
+                  <h2 className="font-display text-2xl font-bold text-foreground">
+                    Proje Başlatın
+                  </h2>
                   <p className="mt-1 text-xs text-foreground/70">
                     Araziniz veya açık alanınız hakkında kısa bilgi verin, size uygun tasarım
                     kurgusunu başlatalım.

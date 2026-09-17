@@ -38,10 +38,8 @@ function Home() {
 
   return (
     <div className="bg-[#E8E6E1] text-[#2C332A] selection:bg-[#A66E4E] selection:text-white">
-      
       {/* 1. HERO — IMMEDIATE RENDER (No loaders) */}
       <section className="relative w-full h-[100svh] min-h-[600px] overflow-hidden flex flex-col justify-between">
-        
         {/* Background Asset */}
         <div className="absolute inset-0 pointer-events-none">
           {heroProject.video ? (
@@ -55,9 +53,9 @@ function Home() {
               className="w-full h-full object-cover opacity-80"
             />
           ) : (
-            <img 
-              src={heroProject.cover} 
-              alt="Landscape Hero" 
+            <img
+              src={heroProject.cover}
+              alt="Landscape Hero"
               className="w-full h-full object-cover opacity-80"
               loading="eager" // Important: No lazy load for hero
             />
@@ -73,7 +71,6 @@ function Home() {
 
         {/* Asymmetric Typography Container */}
         <div className="relative z-10 flex flex-col h-full w-full max-w-[1600px] mx-auto px-6 md:px-12 py-32 md:py-40">
-          
           <div className="mt-auto">
             <h1 className="font-display font-bold leading-[0.85] tracking-tighter mix-blend-difference text-white">
               <span className="block text-[4rem] md:text-[8rem] lg:text-[12rem] xl:text-[14rem] transform md:-translate-x-4">
@@ -84,18 +81,18 @@ function Home() {
               </span>
             </h1>
           </div>
-          
+
           <div className="absolute bottom-12 left-6 md:left-12 flex items-end justify-between w-full pr-12 md:pr-24">
             <div className="max-w-xs md:max-w-md">
               <p className="text-sm md:text-base font-medium text-neutral-800 mix-blend-overlay">
-                Arazinin hafızasını koruyan, iklime uyumlu ve zamanla olgunlaşan deneysel peyzaj mimarlığı pratikleri.
+                Arazinin hafızasını koruyan, iklime uyumlu ve zamanla olgunlaşan deneysel peyzaj
+                mimarlığı pratikleri.
               </p>
             </div>
             <div className="hidden md:flex animate-bounce">
               <ArrowDown size={32} className="text-neutral-800 mix-blend-overlay" />
             </div>
           </div>
-
         </div>
       </section>
 
@@ -119,15 +116,18 @@ function Home() {
             LET'S TALK
           </h2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 font-mono text-sm tracking-widest text-neutral-600 uppercase">
-            <a href="mailto:hello@terra.com" className="hover:text-[#A66E4E] transition-colors">hello@terra.com</a>
+            <a href="mailto:hello@terra.com" className="hover:text-[#A66E4E] transition-colors">
+              hello@terra.com
+            </a>
             <span className="hidden md:block w-2 h-2 rounded-full bg-[#A66E4E]" />
-            <a href="tel:+905550000000" className="hover:text-[#A66E4E] transition-colors">+90 555 000 00 00</a>
+            <a href="tel:+905550000000" className="hover:text-[#A66E4E] transition-colors">
+              +90 555 000 00 00
+            </a>
             <span className="hidden md:block w-2 h-2 rounded-full bg-[#A66E4E]" />
             <span>ISTANBUL, TR</span>
           </div>
         </div>
       </section>
-
     </div>
   );
 }
