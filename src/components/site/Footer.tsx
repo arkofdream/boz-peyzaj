@@ -1,9 +1,10 @@
-import { Link } from "@tanstack/react-router";
+﻿import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, MapPin, Mail, Phone } from "lucide-react";
+import { BuildingSilhouetteSketch } from "./ArchitecturalCroquis";
 
 export function Footer() {
   return (
-    <footer className="border-t border-anthracite/15 bg-anthracite text-offwhite">
+    <footer className="relative border-t border-anthracite/15 bg-anthracite text-offwhite overflow-hidden">`n      {/* Vector City/Landscape Silhouette Skyline in Footer */}`n      <div className=`"pointer-events-none absolute bottom-0 right-0 left-0 h-40 opacity-5 flex items-end justify-between`">`n        <BuildingSilhouetteSketch className=`"w-1/3`" />`n        <BuildingSilhouetteSketch className=`"w-1/3 scale-x-[-1]`" />`n      </div>
       <div className="mx-auto max-w-[1400px] px-6 py-20 lg:px-10 lg:py-28">
         <div className="grid gap-14 lg:grid-cols-12">
           {/* Brand & Manifesto */}

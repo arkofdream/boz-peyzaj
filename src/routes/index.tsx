@@ -164,7 +164,7 @@ function Home() {
           <div className="flex items-center justify-between">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/90 px-3.5 py-1.5 backdrop-blur-md">
               <span className="h-2 w-2 animate-pulse rounded-full bg-moss" />
-              <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-primary">
+              <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-neutral-900 font-bold">
                 Mimari Portfolyo · Vol. 2025/26
               </span>
             </div>
@@ -180,7 +180,7 @@ function Home() {
               <span className="rounded-full bg-forest/90 px-3.5 py-1 font-bold text-primary backdrop-blur-md">
                 {activeHero.plateNo}
               </span>
-              <span className="rounded-full bg-secondary px-3 py-1 text-foreground backdrop-blur-md">
+              <span className="rounded-full bg-secondary px-3 py-1 text-neutral-900 font-bold backdrop-blur-md">
                 {activeHero.category}
               </span>
               <span>{activeHero.location}</span>

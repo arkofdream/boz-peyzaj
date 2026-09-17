@@ -604,3 +604,27 @@ export function BuildingSilhouetteSketch({ className = '' }: { className?: strin
     </div>
   );
 }
+// 6. TREE CLUSTER SKETCH (Vektörel Ağaç Çizimleri)
+export function TreeClusterSketch({ className = '' }: { className?: string }) {
+  return (
+    <div className={"opacity-60 mix-blend-multiply dark:mix-blend-screen " + className}>
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-foreground/30">
+        {/* Tree 1 */}
+        <path d="M100,180 C100,140 100,100 100,60" stroke="currentColor" strokeWidth="2" strokeDasharray="6 3" />
+        <circle cx="100" cy="80" r="50" stroke="currentColor" strokeWidth="1.5" fill="none" strokeDasharray="8 4" />
+        <circle cx="100" cy="80" r="40" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.5" />
+        
+        {/* Tree 2 */}
+        <path d="M150,190 C150,160 150,130 150,100" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 2" opacity="0.8" />
+        <circle cx="150" cy="110" r="35" stroke="currentColor" strokeWidth="1.2" fill="none" strokeDasharray="5 3" opacity="0.8" />
+        
+        {/* Tree 3 */}
+        <path d="M50,170 C50,140 50,110 50,80" stroke="currentColor" strokeWidth="1.5" opacity="0.7" />
+        <path d="M20,90 Q50,40 80,90 Q50,120 20,90 Z" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.7" />
+        
+        {/* Ground */}
+        <line x1="0" y1="180" x2="200" y2="180" stroke="currentColor" strokeWidth="1" opacity="0.5" strokeDasharray="20 10" />
+      </svg>
+    </div>
+  );
+}

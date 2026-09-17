@@ -32,7 +32,7 @@ export function Header() {
     setOpen(false);
   }, [currentPath]);
 
-  const isLightText = false; // Changed to false to prevent unreadable white text on bright banners
+  const isLightText = hasDarkHero && !scrolled;
   return (
     <header
       className={cn(
