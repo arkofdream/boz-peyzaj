@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+﻿import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
   Link,
@@ -17,19 +17,19 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <div className="flex min-h-screen items-center justify-center bg-background pattern-overlay px-4">
       <div className="max-w-md text-center">
         <h1 className="font-display text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Sayfa Bulunamadı</h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Sayfa BulunamadÄ±</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          Aradığınız sayfa mevcut değil veya taşınmış olabilir.
+          AradÄ±ÄŸÄ±nÄ±z sayfa mevcut deÄŸil veya taÅŸÄ±nmÄ±ÅŸ olabilir.
         </p>
         <div className="mt-6">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-full bg-forest px-6 py-3 text-xs uppercase tracking-[0.2em] font-medium text-offwhite transition-colors hover:bg-forest/90"
           >
-            Ana Sayfaya Dön
+            Ana Sayfaya DÃ¶n
           </Link>
         </div>
       </div>
@@ -45,13 +45,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   }, [error]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <div className="flex min-h-screen items-center justify-center bg-background pattern-overlay px-4">
       <div className="max-w-md text-center">
         <h1 className="font-display text-xl font-semibold tracking-tight text-foreground">
-          Sayfa Yüklenemedi
+          Sayfa YÃ¼klenemedi
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Beklenmeyen bir durum oluştu. Yeniden deneyebilir veya ana sayfaya dönebilirsiniz.
+          Beklenmeyen bir durum oluÅŸtu. Yeniden deneyebilir veya ana sayfaya dÃ¶nebilirsiniz.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <button
@@ -80,17 +80,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "TERRA — Peyzaj Mimarlığı & Dış Mekân Tasarımı" },
+      { title: "TERRA â€” Peyzaj MimarlÄ±ÄŸÄ± & DÄ±ÅŸ MekÃ¢n TasarÄ±mÄ±" },
       {
         name: "description",
         content:
-          "TERRA Peyzaj Mimarlığı; villa bahçeleri, kamusal parklar, otel avluları ve kurumsal açık alanlar için doğa ve mimariyi buluşturan premium peyzaj tasarımları üretir.",
+          "TERRA Peyzaj MimarlÄ±ÄŸÄ±; villa bahÃ§eleri, kamusal parklar, otel avlularÄ± ve kurumsal aÃ§Ä±k alanlar iÃ§in doÄŸa ve mimariyi buluÅŸturan premium peyzaj tasarÄ±mlarÄ± Ã¼retir.",
       },
-      { name: "author", content: "TERRA Peyzaj Mimarlığı" },
-      { property: "og:title", content: "TERRA — Peyzaj Mimarlığı" },
+      { name: "author", content: "TERRA Peyzaj MimarlÄ±ÄŸÄ±" },
+      { property: "og:title", content: "TERRA â€” Peyzaj MimarlÄ±ÄŸÄ±" },
       {
         property: "og:description",
-        content: "Doğayı ve mimariyi buluşturan, iklime duyarlı zamansız peyzaj projeleri.",
+        content: "DoÄŸayÄ± ve mimariyi buluÅŸturan, iklime duyarlÄ± zamansÄ±z peyzaj projeleri.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -121,7 +121,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className="min-h-screen bg-background text-foreground antialiased selection:bg-terracotta selection:text-white">
+      <body className="min-h-screen bg-background pattern-overlay text-foreground antialiased selection:bg-terracotta selection:text-primary-foreground">
         {children}
         <Scripts />
       </body>
