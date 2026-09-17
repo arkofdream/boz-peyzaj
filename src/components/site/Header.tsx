@@ -47,7 +47,8 @@ export function Header() {
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4.5 lg:px-10">
         <Link to="/" className="group flex flex-col leading-none">
           <div className="flex items-center gap-1.5">
-            <div className="w-8 h-6 mr-1 opacity-80"><BuildingSilhouetteSketch /></div>`n            <span className={cn("font-display text-2xl font-bold tracking-[0.2em] transition-colors duration-300", isLightText ? "text-offwhite" : "text-foreground")}>
+            <div className="w-8 h-6 mr-1 opacity-80"><BuildingSilhouetteSketch /></div>
+            <span className={cn("font-display text-2xl font-bold tracking-[0.2em] transition-colors duration-300", isLightText ? "text-offwhite" : "text-foreground")}>
               TERRA
             </span>
             <span className="h-1.5 w-1.5 rounded-full bg-moss transition-transform duration-300 group-hover:scale-150" />
