@@ -1,4 +1,4 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Compass, Trees, Award } from "lucide-react";
 import studioAsset from "@/assets/studio.jpg.asset.json";
 import { Reveal } from "@/components/site/Reveal";
@@ -11,18 +11,18 @@ import {
 export const Route = createFileRoute("/hakkimizda")({
   head: () => ({
     meta: [
-      { title: "StÃ¼dyo & YaklaÅŸÄ±m â€” TERRA Peyzaj MimarlÄ±ÄŸÄ±" },
+      { title: "Stüdyo & Yaklaşım — TERRA Peyzaj Mimarlığı" },
       {
         name: "description",
         content:
-          "TERRA, Ä°zmir merkezli peyzaj mimarlÄ±ÄŸÄ± stÃ¼dyosudur. Ekip, ekolojik tasarÄ±m yaklaÅŸÄ±mÄ± ve 5 adÄ±mlÄ± Ã§alÄ±ÅŸma sÃ¼reci.",
+          "TERRA, İzmir merkezli peyzaj mimarlığı stüdyosudur. Ekip, ekolojik tasarım yaklaşımı ve 5 adımlı çalışma süreci.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "StÃ¼dyo â€” TERRA Peyzaj MimarlÄ±ÄŸÄ±" },
+      { property: "og:title", content: "Stüdyo — TERRA Peyzaj Mimarlığı" },
       {
         property: "og:description",
-        content: "18 yÄ±ldÄ±r doÄŸayla mimariyi bir araya getiren baÄŸÄ±msÄ±z peyzaj mimarlÄ±ÄŸÄ± stÃ¼dyosu.",
+        content: "18 yıldır doğayla mimariyi bir araya getiren bağımsız peyzaj mimarlığı stüdyosu.",
       },
     ],
   }),
@@ -32,46 +32,46 @@ export const Route = createFileRoute("/hakkimizda")({
 const process = [
   {
     n: "01",
-    t: "Arazi OkumasÄ± & Ekolojik Analiz",
-    d: "Toprak yapÄ±sÄ±, mikro-iklim, hÃ¢kim rÃ¼zgÃ¢rlar, gÃ¼neÅŸlenme aÃ§Ä±larÄ± ve mevcut aÄŸaÃ§larÄ±n rÃ¶lÃ¶vesi.",
+    t: "Arazi Okuması & Ekolojik Analiz",
+    d: "Toprak yapısı, mikro-iklim, hâkim rüzgârlar, güneşlenme açıları ve mevcut ağaçların rölövesi.",
   },
   {
     n: "02",
-    t: "Konsept & MekÃ¢nsal Kurgu",
-    d: "Ana akslar, sirkÃ¼lasyon ÅŸemasÄ±, su ve gÃ¶lge alanlarÄ±nÄ±n el Ã§izimleri ve 3B hacim Ã§alÄ±ÅŸmalarÄ±.",
+    t: "Konsept & Mekânsal Kurgu",
+    d: "Ana akslar, sirkülasyon şeması, su ve gölge alanlarının el çizimleri ve 3B hacim çalışmaları.",
   },
   {
     n: "03",
-    t: "TasarÄ±m GeliÅŸtirme & DetaylandÄ±rma",
-    d: "Kot planlarÄ±, sert zemin kesitleri, detaylÄ± bitkilendirme listesi ve gece aydÄ±nlatma projeleri.",
+    t: "Tasarım Geliştirme & Detaylandırma",
+    d: "Kot planları, sert zemin kesitleri, detaylı bitkilendirme listesi ve gece aydınlatma projeleri.",
   },
   {
     n: "04",
-    t: "Uygulama & Åantiye Denetimi",
-    d: "DoÄŸal taÅŸ seÃ§imi, altyapÄ± drenaj kontrolÃ¼, fidanlÄ±k seÃ§imi ve ÅŸantiye yerinde montaj denetimi.",
+    t: "Uygulama & Şantiye Denetimi",
+    d: "Doğal taş seçimi, altyapı drenaj kontrolü, fidanlık seçimi ve şantiye yerinde montaj denetimi.",
   },
   {
     n: "05",
-    t: "OlgunlaÅŸma & BakÄ±m YÃ¶netimi",
-    d: "Ä°lk Ã¼Ã§ kritik bÃ¼yÃ¼me yÄ±lÄ±nda mevsimlik kontroller, budama reÃ§eteleri ve geliÅŸim raporlamasÄ±.",
+    t: "Olgunlaşma & Bakım Yönetimi",
+    d: "İlk üç kritik büyüme yılında mevsimlik kontroller, budama reçeteleri ve gelişim raporlaması.",
   },
 ];
 
 const pillars = [
   {
     icon: Compass,
-    title: "Yerel Odak & TopoÄŸrafya",
-    desc: "Her coÄŸrafyanÄ±n kendi jeolojik ve biyolojik dokusuna saygÄ± duyan tasarÄ±m.",
+    title: "Yerel Odak & Topoğrafya",
+    desc: "Her coğrafyanın kendi jeolojik ve biyolojik dokusuna saygı duyan tasarım.",
   },
   {
     icon: Trees,
-    title: "Ä°klim Direnci & BiyoÃ§eÅŸitlilik",
-    desc: "AÅŸÄ±rÄ± sÄ±caklara ve kuraklÄ±ÄŸa dayanÄ±klÄ±, kendini besleyen bitki topluluklarÄ±.",
+    title: "İklim Direnci & Biyoçeşitlilik",
+    desc: "Aşırı sıcaklara ve kuraklığa dayanıklı, kendini besleyen bitki toplulukları.",
   },
   {
     icon: Award,
-    title: "BÃ¼tÃ¼ncÃ¼l Sorumluluk",
-    desc: "Fikir taslaÄŸÄ±ndan 10 yÄ±l sonraki olgun aÄŸaca kadar aynÄ± ekiple yanÄ±nÄ±zdayÄ±z.",
+    title: "Bütüncül Sorumluluk",
+    desc: "Fikir taslağından 10 yıl sonraki olgun ağaca kadar aynı ekiple yanınızdayız.",
   },
 ];
 
@@ -87,7 +87,7 @@ function AboutPage() {
         <div className="flex items-center justify-between">
           <span className="inline-flex items-center gap-2 rounded-full border border-moss/30 bg-moss/20 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.3em] text-moss">
             <Sparkles size={12} className="text-primary" />
-            StÃ¼dyo & Felsefe
+            Stüdyo & Felsefe
           </span>
           <div className="hidden sm:block">
             <GraphicScaleBar />
@@ -95,7 +95,7 @@ function AboutPage() {
         </div>
 
         <h1 className="mt-6 max-w-4xl font-display text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-[4.8rem]">
-          PeyzajÄ± bir dekorasyon deÄŸil, zamanla bÃ¼yÃ¼yen bir organizma olarak gÃ¶rÃ¼yoruz.
+          Peyzajı bir dekorasyon değil, zamanla büyüyen bir organizma olarak görüyoruz.
         </h1>
       </section>
 
@@ -105,7 +105,7 @@ function AboutPage() {
           <div className="overflow-hidden rounded-3xl border border-border shadow-2xl">
             <img
               src={studioAsset.url}
-              alt="TERRA peyzaj mimarlÄ±ÄŸÄ± stÃ¼dyosu Ã§alÄ±ÅŸma ortamÄ±"
+              alt="TERRA peyzaj mimarlığı stüdyosu çalışma ortamı"
               loading="lazy"
               className="h-[55vh] min-h-[420px] w-full object-cover transition-transform duration-1000 hover:scale-105 lg:h-[72vh]"
             />
@@ -120,23 +120,23 @@ function AboutPage() {
             Kimiz?
           </span>
           <h2 className="font-display text-3xl font-bold text-foreground lg:text-4xl">
-            DoÄŸa ve mimarinin kesiÅŸiminde 18 yÄ±l.
+            Doğa ve mimarinin kesişiminde 18 yıl.
           </h2>
         </Reveal>
 
         <Reveal className="space-y-6 lg:col-span-7" delay={100}>
           <p className="font-display text-2xl font-medium leading-[1.4] text-primary sm:text-3xl">
-            2008 yÄ±lÄ±nda kurulan TERRA; peyzaj mimarlarÄ±, ziraat mÃ¼hendisleri, botanik danÄ±ÅŸmanlarÄ±
-            ve saha yÃ¶neticilerinden oluÅŸan on kiÅŸilik multidisipliner bir tasarÄ±m stÃ¼dyosudur.
+            2008 yılında kurulan TERRA; peyzaj mimarları, ziraat mühendisleri, botanik danışmanları
+            ve saha yöneticilerinden oluşan on kişilik multidisipliner bir tasarım stüdyosudur.
           </p>
           <p className="text-base leading-relaxed text-foreground/75">
-            Ege ve Akdeniz havzasÄ±nÄ±n kendine has iklimsel zorluklarÄ± ve benzersiz gÃ¼zellikleri
-            bizim laboratuvarÄ±mÄ±z oldu. Projelerimizde su sarfiyatÄ±nÄ± azaltan, rÃ¼zgÃ¢rÄ± serinleten ve
-            yapay kimyasal ilaÃ§lamaya gerek duymayan ekosistemler tasarlÄ±yoruz.
+            Ege ve Akdeniz havzasının kendine has iklimsel zorlukları ve benzersiz güzellikleri
+            bizim laboratuvarımız oldu. Projelerimizde su sarfiyatını azaltan, rüzgârı serinleten ve
+            yapay kimyasal ilaçlamaya gerek duymayan ekosistemler tasarlıyoruz.
           </p>
           <p className="text-base leading-relaxed text-foreground/75">
-            AhÅŸap, doÄŸal taÅŸ ve yerel mermer gibi malzemeleri iÅŸlenmemiÅŸ halleriyle seviyor;
-            doÄŸallÄ±ÄŸÄ± kusursuz geometrilerle dengeliyoruz.
+            Ahşap, doğal taş ve yerel mermer gibi malzemeleri işlenmemiş halleriyle seviyor;
+            doğallığı kusursuz geometrilerle dengeliyoruz.
           </p>
         </Reveal>
       </section>
@@ -173,10 +173,10 @@ function AboutPage() {
       <section className="relative z-10 mx-auto max-w-[1400px] px-6 py-24 lg:px-10 lg:py-32">
         <div className="max-w-2xl">
           <span className="inline-block rounded-full border border-moss/30 bg-forest/20 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.3em] text-moss">
-            SÃ¼reÃ§
+            Süreç
           </span>
           <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-foreground lg:text-5xl">
-            TasarÄ±m NasÄ±l Ä°lerler?
+            Tasarım Nasıl İlerler?
           </h2>
         </div>
 
@@ -203,21 +203,21 @@ function AboutPage() {
         <div className="relative z-10 mx-auto max-w-[1400px] px-6 text-center lg:px-10">
           <Reveal className="mx-auto max-w-3xl space-y-6">
             <span className="inline-block rounded-full bg-secondary px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.3em] text-primary backdrop-blur-md">
-              StÃ¼dyo Ziyareti
+              Stüdyo Ziyareti
             </span>
             <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl lg:text-6xl">
-              Projelerinizi Ã§izim masasÄ±nda konuÅŸalÄ±m.
+              Projelerinizi çizim masasında konuşalım.
             </h2>
             <p className="mx-auto max-w-xl text-base text-foreground/80">
-              Alsancak stÃ¼dyomuzda malzeme Ã¶rneklerini inceleyebilir, arazinizin fotoÄŸraflarÄ±
-              Ã¼zerinden konsept eskizler Ã§Ä±kartabiliriz.
+              Alsancak stüdyomuzda malzeme örneklerini inceleyebilir, arazinizin fotoğrafları
+              üzerinden konsept eskizler çıkartabiliriz.
             </p>
             <div className="pt-4">
               <Link
                 to="/iletisim"
                 className="group inline-flex items-center gap-3 rounded-full bg-terracotta px-8 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-on-image shadow-xl transition-all duration-300 hover:bg-terracotta/90"
               >
-                <span>Randevu AlÄ±n</span>
+                <span>Randevu Alın</span>
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
             </div>

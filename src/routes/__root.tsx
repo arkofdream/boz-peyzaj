@@ -1,4 +1,4 @@
-﻿import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
   Link,
@@ -20,16 +20,16 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center bg-background pattern-overlay px-4">
       <div className="max-w-md text-center">
         <h1 className="font-display text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Sayfa BulunamadÄ±</h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Sayfa Bulunamadı</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          AradÄ±ÄŸÄ±nÄ±z sayfa mevcut deÄŸil veya taÅŸÄ±nmÄ±ÅŸ olabilir.
+          Aradığınız sayfa mevcut değil veya taşınmış olabilir.
         </p>
         <div className="mt-6">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-full bg-forest px-6 py-3 text-xs uppercase tracking-[0.2em] font-medium text-offwhite transition-colors hover:bg-forest/90"
           >
-            Ana Sayfaya DÃ¶n
+            Ana Sayfaya Dön
           </Link>
         </div>
       </div>
@@ -48,10 +48,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
     <div className="flex min-h-screen items-center justify-center bg-background pattern-overlay px-4">
       <div className="max-w-md text-center">
         <h1 className="font-display text-xl font-semibold tracking-tight text-foreground">
-          Sayfa YÃ¼klenemedi
+          Sayfa Yüklenemedi
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Beklenmeyen bir durum oluÅŸtu. Yeniden deneyebilir veya ana sayfaya dÃ¶nebilirsiniz.
+          Beklenmeyen bir durum oluştu. Yeniden deneyebilir veya ana sayfaya dönebilirsiniz.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <button
@@ -65,7 +65,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-full border border-border bg-background px-6 py-3 text-xs uppercase tracking-[0.2em] font-medium text-foreground transition-colors hover:bg-sand/40"
+            className="inline-flex items-center justify-center rounded-full border border-border bg-background pattern-overlay px-6 py-3 text-xs uppercase tracking-[0.2em] font-medium text-foreground transition-colors hover:bg-sand/40"
           >
             Ana Sayfa
           </a>
@@ -80,17 +80,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "TERRA â€” Peyzaj MimarlÄ±ÄŸÄ± & DÄ±ÅŸ MekÃ¢n TasarÄ±mÄ±" },
+      { title: "TERRA — Peyzaj Mimarlığı & Dış Mekân Tasarımı" },
       {
         name: "description",
         content:
-          "TERRA Peyzaj MimarlÄ±ÄŸÄ±; villa bahÃ§eleri, kamusal parklar, otel avlularÄ± ve kurumsal aÃ§Ä±k alanlar iÃ§in doÄŸa ve mimariyi buluÅŸturan premium peyzaj tasarÄ±mlarÄ± Ã¼retir.",
+          "TERRA Peyzaj Mimarlığı; villa bahçeleri, kamusal parklar, otel avluları ve kurumsal açık alanlar için doğa ve mimariyi buluşturan premium peyzaj tasarımları üretir.",
       },
-      { name: "author", content: "TERRA Peyzaj MimarlÄ±ÄŸÄ±" },
-      { property: "og:title", content: "TERRA â€” Peyzaj MimarlÄ±ÄŸÄ±" },
+      { name: "author", content: "TERRA Peyzaj Mimarlığı" },
+      { property: "og:title", content: "TERRA — Peyzaj Mimarlığı" },
       {
         property: "og:description",
-        content: "DoÄŸayÄ± ve mimariyi buluÅŸturan, iklime duyarlÄ± zamansÄ±z peyzaj projeleri.",
+        content: "Doğayı ve mimariyi buluşturan, iklime duyarlı zamansız peyzaj projeleri.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

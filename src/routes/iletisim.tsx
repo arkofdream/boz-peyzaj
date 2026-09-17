@@ -1,4 +1,4 @@
-﻿import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { toast } from "sonner";
 import { MapPin, Mail, Phone, Clock, Send, Sparkles, CheckCircle2 } from "lucide-react";
@@ -8,18 +8,18 @@ import { TopoContourBackground, GraphicScaleBar } from "@/components/site/Archit
 export const Route = createFileRoute("/iletisim")({
   head: () => ({
     meta: [
-      { title: "Ä°letiÅŸim & Proje Talebi â€” TERRA Peyzaj MimarlÄ±ÄŸÄ±" },
+      { title: "İletişim & Proje Talebi — TERRA Peyzaj Mimarlığı" },
       {
         name: "description",
         content:
-          "Yeni peyzaj projeniz, villa bahÃ§eniz veya ticari aÃ§Ä±k alanÄ±nÄ±z iÃ§in TERRA stÃ¼dyosuna ulaÅŸÄ±n. Ä°zmir merkezli, tÃ¼m TÃ¼rkiye.",
+          "Yeni peyzaj projeniz, villa bahçeniz veya ticari açık alanınız için TERRA stüdyosuna ulaşın. İzmir merkezli, tüm Türkiye.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "Ä°letiÅŸim â€” TERRA Peyzaj MimarlÄ±ÄŸÄ±" },
+      { property: "og:title", content: "İletişim — TERRA Peyzaj Mimarlığı" },
       {
         property: "og:description",
-        content: "Projenizi konuÅŸmak ve keÅŸif randevusu almak iÃ§in bize ulaÅŸÄ±n.",
+        content: "Projenizi konuşmak ve keşif randevusu almak için bize ulaşın.",
       },
     ],
   }),
@@ -43,7 +43,7 @@ function ContactPage() {
         <div className="flex items-center justify-between">
           <span className="inline-flex items-center gap-2 rounded-full border border-moss/30 bg-moss/20 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.3em] text-moss">
             <Sparkles size={12} className="text-primary" />
-            Ä°letiÅŸim & DanÄ±ÅŸmanlÄ±k
+            İletişim & Danışmanlık
           </span>
           <div className="hidden sm:block">
             <GraphicScaleBar />
@@ -51,11 +51,11 @@ function ContactPage() {
         </div>
 
         <h1 className="mt-6 max-w-3xl font-display text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-[4.5rem]">
-          Arazinizi konuÅŸalÄ±m.
+          Arazinizi konuşalım.
         </h1>
         <p className="mt-4 max-w-xl text-base text-foreground/75">
-          Konsept tasarÄ±mdan anahtar teslim uygulamaya; fikirlerinizi dinlemek ve yerinde rÃ¶lÃ¶ve
-          yapmak iÃ§in bizimle iletiÅŸime geÃ§in.
+          Konsept tasarımdan anahtar teslim uygulamaya; fikirlerinizi dinlemek ve yerinde rölöve
+          yapmak için bizimle iletişime geçin.
         </p>
       </section>
 
@@ -64,7 +64,7 @@ function ContactPage() {
         {/* Contact Details Card (5 cols) */}
         <Reveal className="lg:col-span-5">
           <div className="space-y-8 rounded-3xl border border-border bg-card/80 p-8 shadow-2xl backdrop-blur-xl sm:p-10">
-            <h2 className="font-display text-2xl font-bold text-foreground">StÃ¼dyo Bilgileri</h2>
+            <h2 className="font-display text-2xl font-bold text-foreground">Stüdyo Bilgileri</h2>
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
@@ -73,10 +73,10 @@ function ContactPage() {
                 </div>
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-primary/60">
-                    Merkez StÃ¼dyo
+                    Merkez Stüdyo
                   </p>
                   <p className="mt-1 text-sm font-medium leading-relaxed text-foreground">
-                    Mustafa Bey Cad. No 12, Alsancak, Ä°zmir
+                    Mustafa Bey Cad. No 12, Alsancak, İzmir
                   </p>
                 </div>
               </div>
@@ -121,19 +121,19 @@ function ContactPage() {
                 </div>
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-primary/60">
-                    Ã‡alÄ±ÅŸma Saatleri
+                    Çalışma Saatleri
                   </p>
                   <p className="mt-1 text-sm font-medium text-foreground">
-                    Pazartesi â€“ Cuma: 09:00 â€“ 18:00
+                    Pazartesi – Cuma: 09:00 – 18:00
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="rounded-2xl border border-border bg-card/70 p-4 text-xs leading-relaxed text-foreground/70">
-              <span className="font-semibold text-warm-yellow">Yerinde KeÅŸif & Analiz:</span> Ä°zmir,
-              Bodrum, Ã‡eÅŸme ve Urla bÃ¶lgelerindeki projeler iÃ§in 48 saat iÃ§erisinde yerinde rÃ¶lÃ¶ve
-              ve Ã¶n gÃ¶rÃ¼ÅŸme planlayabiliyoruz.
+              <span className="font-semibold text-warm-yellow">Yerinde Keşif & Analiz:</span> İzmir,
+              Bodrum, Çeşme ve Urla bölgelerindeki projeler için 48 saat içerisinde yerinde rölöve
+              ve ön görüşme planlayabiliyoruz.
             </div>
           </div>
         </Reveal>
@@ -150,8 +150,8 @@ function ContactPage() {
                   Talebiniz Kaydedildi
                 </h3>
                 <p className="mx-auto max-w-md text-sm text-foreground/75">
-                  Proje detaylarÄ±nÄ±zÄ± aldÄ±k. BaÅŸ peyzaj mimarÄ±mÄ±z en geÃ§ 24 saat iÃ§erisinde sizinle
-                  iletiÅŸime geÃ§ecektir.
+                  Proje detaylarınızı aldık. Baş peyzaj mimarımız en geç 24 saat içerisinde sizinle
+                  iletişime geçecektir.
                 </p>
               </div>
             ) : (
@@ -159,15 +159,15 @@ function ContactPage() {
                 onSubmit={(e) => {
                   e.preventDefault();
                   setSent(true);
-                  toast.success("Proje talebiniz iletildi. 24 saat iÃ§inde dÃ¶nÃ¼ÅŸ yapÄ±lacaktÄ±r.");
+                  toast.success("Proje talebiniz iletildi. 24 saat içinde dönüş yapılacaktır.");
                 }}
                 className="space-y-6"
               >
                 <div>
-                  <h2 className="font-display text-2xl font-bold text-foreground">Proje BaÅŸlatÄ±n</h2>
+                  <h2 className="font-display text-2xl font-bold text-foreground">Proje Başlatın</h2>
                   <p className="mt-1 text-xs text-foreground/70">
-                    Araziniz veya aÃ§Ä±k alanÄ±nÄ±z hakkÄ±nda kÄ±sa bilgi verin, size uygun tasarÄ±m
-                    kurgusunu baÅŸlatalÄ±m.
+                    Araziniz veya açık alanınız hakkında kısa bilgi verin, size uygun tasarım
+                    kurgusunu başlatalım.
                   </p>
                 </div>
 
@@ -183,7 +183,7 @@ function ContactPage() {
                       id="name"
                       type="text"
                       required
-                      placeholder="Ahmet YÄ±lmaz"
+                      placeholder="Ahmet Yılmaz"
                       className={fieldClass}
                     />
                   </div>
@@ -232,7 +232,7 @@ function ContactPage() {
                     <input
                       id="location"
                       type="text"
-                      placeholder="Ã–rn. Bodrum, Ã‡eÅŸme, Urla"
+                      placeholder="Örn. Bodrum, Çeşme, Urla"
                       className={fieldClass}
                     />
                   </div>
@@ -247,19 +247,19 @@ function ContactPage() {
                   </label>
                   <select id="type" className={fieldClass}>
                     <option value="villa" className="bg-card text-foreground">
-                      MÃ¼stakil Villa / Konut BahÃ§esi
+                      Müstakil Villa / Konut Bahçesi
                     </option>
                     <option value="hotel" className="bg-card text-foreground">
-                      Butik Otel / Tatil KÃ¶yÃ¼ AÃ§Ä±k AlanÄ±
+                      Butik Otel / Tatil Köyü Açık Alanı
                     </option>
                     <option value="public" className="bg-card text-foreground">
-                      Kamusal Park / Kentsel TasarÄ±m
+                      Kamusal Park / Kentsel Tasarım
                     </option>
                     <option value="corporate" className="bg-card text-foreground">
-                      Kurumsal Ofis / Ã‡atÄ± BahÃ§esi
+                      Kurumsal Ofis / Çatı Bahçesi
                     </option>
                     <option value="consult" className="bg-card text-foreground">
-                      DiÄŸer / DanÄ±ÅŸmanlÄ±k
+                      Diğer / Danışmanlık
                     </option>
                   </select>
                 </div>
@@ -269,12 +269,12 @@ function ContactPage() {
                     htmlFor="msg"
                     className="font-mono text-[11px] uppercase tracking-[0.2em] text-primary/70"
                   >
-                    Proje NotlarÄ± & Beklentiler
+                    Proje Notları & Beklentiler
                   </label>
                   <textarea
                     id="msg"
                     rows={4}
-                    placeholder="Arazinin bÃ¼yÃ¼klÃ¼ÄŸÃ¼, mevcut aÄŸaÃ§lar veya hayal ettiÄŸiniz atmosfer hakkÄ±nda notlar..."
+                    placeholder="Arazinin büyüklüğü, mevcut ağaçlar veya hayal ettiğiniz atmosfer hakkında notlar..."
                     className={fieldClass}
                   />
                 </div>
@@ -283,7 +283,7 @@ function ContactPage() {
                   type="submit"
                   className="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-terracotta py-4 text-xs font-semibold uppercase tracking-[0.22em] text-on-image shadow-xl transition-all duration-300 hover:bg-terracotta/90 hover:shadow-2xl"
                 >
-                  <span>Talebi Ä°let</span>
+                  <span>Talebi İlet</span>
                   <Send size={14} className="transition-transform group-hover:translate-x-1" />
                 </button>
               </form>

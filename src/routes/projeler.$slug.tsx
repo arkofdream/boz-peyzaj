@@ -1,4 +1,4 @@
-﻿import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   ArrowLeft,
@@ -29,13 +29,13 @@ export const Route = createFileRoute("/projeler/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Proje BulunamadÄ± â€” TERRA Peyzaj" },
+          { title: "Proje Bulunamadı — TERRA Peyzaj" },
           { name: "robots", content: "noindex" },
         ],
       };
     }
     const p = loaderData.project;
-    const title = `${p.title} â€” TERRA Peyzaj MimarlÄ±ÄŸÄ±`;
+    const title = `${p.title} — TERRA Peyzaj Mimarlığı`;
     return {
       meta: [
         { title },
@@ -54,15 +54,15 @@ export const Route = createFileRoute("/projeler/$slug")({
 function ProjectNotFound() {
   return (
     <div className="flex min-h-[70vh] flex-col items-center justify-center gap-6 px-6 text-center text-foreground">
-      <h1 className="font-display text-4xl font-bold text-foreground">Proje BulunamadÄ±</h1>
+      <h1 className="font-display text-4xl font-bold text-foreground">Proje Bulunamadı</h1>
       <p className="max-w-md text-sm text-foreground/70">
-        AradÄ±ÄŸÄ±nÄ±z proje arÅŸivimizde yer almÄ±yor ya da yayÄ±ndan kaldÄ±rÄ±lmÄ±ÅŸ olabilir.
+        Aradığınız proje arşivimizde yer almıyor ya da yayından kaldırılmış olabilir.
       </p>
       <Link
         to="/projeler"
         className="rounded-full bg-forest px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary transition-colors hover:bg-forest/80"
       >
-        TÃ¼m Projeleri GÃ¶rÃ¼ntÃ¼le
+        Tüm Projeleri Görüntüle
       </Link>
     </div>
   );
@@ -117,7 +117,7 @@ function ProjectDetail() {
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card/90 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.22em] text-primary backdrop-blur-md transition-colors hover:border-offwhite hover:bg-secondary"
             >
               <ArrowLeft size={13} />
-              <span>TÃ¼m Projeler</span>
+              <span>Tüm Projeler</span>
             </Link>
 
             <div className="hidden sm:block">
@@ -158,19 +158,19 @@ function ProjectDetail() {
             {/* Metadata Sidebar (4 cols) */}
             <div className="rounded-3xl border border-border bg-card/80 p-8 shadow-2xl backdrop-blur-xl lg:col-span-4">
               <div className="flex items-center justify-between border-b border-border pb-4">
-                <h2 className="font-display text-xl font-bold text-foreground">Proje KÃ¼nyesi</h2>
+                <h2 className="font-display text-xl font-bold text-foreground">Proje Künyesi</h2>
                 <span className="font-mono text-xs font-bold text-moss">{project.plateNo}</span>
               </div>
 
               <div className="mt-6 divide-y divide-white/10">
                 {[
                   ["Konum", project.location],
-                  ["YÄ±l", project.year],
-                  ["Proje AlanÄ±", project.area],
+                  ["Yıl", project.year],
+                  ["Proje Alanı", project.area],
                   ["Tipoloji", project.category],
                   ["Koordinatlar", project.coordinates],
-                  ["RakÄ±m & Ã–lÃ§ek", `${project.elevation} Â· ${project.drawingScale}`],
-                  ["TasarÄ±m Åablonu", project.templateName],
+                  ["Rakım & Ölçek", `${project.elevation} · ${project.drawingScale}`],
+                  ["Tasarım Şablonu", project.templateName],
                 ].map(([k, v]) => (
                   <div key={k} className="py-3.5 first:pt-0">
                     <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-primary/70">
@@ -182,7 +182,7 @@ function ProjectDetail() {
 
                 <div className="pt-4">
                   <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-primary/70">
-                    Hizmet KapsamÄ±
+                    Hizmet Kapsamı
                   </p>
                   <div className="mt-2.5 flex flex-wrap gap-1.5">
                     {project.scope.map((s) => (
@@ -201,7 +201,7 @@ function ProjectDetail() {
             {/* Project Story / Narrative (8 cols) */}
             <div className="space-y-6 lg:col-span-8 lg:pl-6">
               <span className="inline-block rounded-full border border-moss/30 bg-forest/20 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.3em] text-moss">
-                TasarÄ±m AnlatÄ±sÄ±
+                Tasarım Anlatısı
               </span>
 
               {project.story.map((p, i) => (
@@ -216,7 +216,7 @@ function ProjectDetail() {
                 </Reveal>
               ))}
 
-              {/* Arazi Kesiti Ã‡izimi */}
+              {/* Arazi Kesiti Çizimi */}
               <div className="pt-4">
                 <ElevationSectionCroquis />
               </div>
@@ -239,10 +239,10 @@ function ProjectDetail() {
             <div>
               <span className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em] text-moss">
                 <BookOpen size={13} className="text-primary" />
-                Mimari Katalog & Åartname DetayÄ±
+                Mimari Katalog & Şartname Detayı
               </span>
               <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                Levha, Bitkiler & Malzeme KartelasÄ±
+                Levha, Bitkiler & Malzeme Kartelası
               </h2>
             </div>
             <div className="flex flex-wrap items-center gap-3 font-mono text-xs text-primary">
@@ -265,10 +265,10 @@ function ProjectDetail() {
                   <div>
                     <div className="flex items-center justify-between border-b border-border pb-3">
                       <h3 className="font-display text-lg font-bold text-foreground sm:text-xl">
-                        Bitkisel TasarÄ±m Paleti
+                        Bitkisel Tasarım Paleti
                       </h3>
                       <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-moss">
-                        {project.plants.length} Karakteristik TÃ¼r
+                        {project.plants.length} Karakteristik Tür
                       </span>
                     </div>
 
@@ -300,10 +300,10 @@ function ProjectDetail() {
                   <div>
                     <div className="flex items-center justify-between border-b border-border pb-3">
                       <h3 className="font-display text-lg font-bold text-foreground sm:text-xl">
-                        Sert Zemin & Malzeme KartelasÄ±
+                        Sert Zemin & Malzeme Kartelası
                       </h3>
                       <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta">
-                        DoÄŸal Dokular
+                        Doğal Dokular
                       </span>
                     </div>
 
@@ -335,7 +335,7 @@ function ProjectDetail() {
                 <div className="flex items-center gap-2">
                   <Compass size={14} className="text-primary" />
                   <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary">
-                    Uygulanan TasarÄ±m Åablonu
+                    Uygulanan Tasarım Şablonu
                   </span>
                 </div>
 
@@ -351,14 +351,14 @@ function ProjectDetail() {
                 <div className="mt-6 space-y-3 border-t border-border pt-5 text-xs">
                   <div>
                     <span className="font-mono text-[10px] uppercase tracking-wider text-primary/70">
-                      Toprak & EÄŸim Uyumu:
+                      Toprak & Eğim Uyumu:
                     </span>
                     <p className="mt-0.5 text-foreground/85">{matchedTemplate?.climateZone}</p>
                   </div>
 
                   <div>
                     <span className="font-mono text-[10px] uppercase tracking-wider text-primary/70">
-                      Sulama & Su YÃ¶netimi:
+                      Sulama & Su Yönetimi:
                     </span>
                     <p className="mt-0.5 text-foreground/85">{matchedTemplate?.waterNeed}</p>
                   </div>
@@ -367,7 +367,7 @@ function ProjectDetail() {
                 {matchedTemplate?.features && (
                   <div className="mt-6 border-t border-border pt-5">
                     <span className="font-mono text-[10px] uppercase tracking-wider text-primary/70">
-                      TasarÄ±m Prensipleri:
+                      Tasarım Prensipleri:
                     </span>
                     <ul className="mt-3 space-y-2">
                     {matchedTemplate.features.map((feat, idx) => (
@@ -392,7 +392,7 @@ function ProjectDetail() {
         <div className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-10">
           <div className="mb-10">
             <span className="inline-block rounded-full border border-moss/30 bg-forest/20 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.3em] text-moss">
-              FotoÄŸraf SeÃ§kisi & Levha DetaylarÄ±
+              Fotoğraf Seçkisi & Levha Detayları
             </span>
             <h2 className="mt-3 font-display text-3xl font-bold text-foreground lg:text-4xl">
               Detaylar ve Atmosfer
@@ -420,7 +420,7 @@ function ProjectDetail() {
                     >
                       <img
                         src={g}
-                        alt={`${project.title} gÃ¶rsel ${i + 1}`}
+                        alt={`${project.title} görsel ${i + 1}`}
                         loading="lazy"
                         className="h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                       />
@@ -445,14 +445,14 @@ function ProjectDetail() {
           <div className="relative z-10 mx-auto grid max-w-[1400px] items-center gap-14 px-6 lg:grid-cols-12 lg:px-10">
             <Reveal className="space-y-4 lg:col-span-6">
               <span className="inline-block rounded-full border border-moss/30 bg-forest/20 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.3em] text-moss">
-                CanlÄ± Deneyim
+                Canlı Deneyim
               </span>
               <h2 className="font-display text-4xl font-bold leading-tight text-foreground lg:text-5xl">
-                BahÃ§ede YÃ¼rÃ¼yÃ¼ÅŸ
+                Bahçede Yürüyüş
               </h2>
               <p className="text-base leading-relaxed text-foreground/75">
-                Tamamlanan alandan alÄ±nan dikey hareketli kayÄ±t; bitkilerin rÃ¼zgÃ¢rla etkileÅŸimini,
-                doÄŸal taÅŸ kaplamalarÄ±n derinliÄŸini ve gÃ¼n batÄ±mÄ±ndaki Ä±ÅŸÄ±k yansÄ±masÄ±nÄ± gÃ¶sterir.
+                Tamamlanan alandan alınan dikey hareketli kayıt; bitkilerin rüzgârla etkileşimini,
+                doğal taş kaplamaların derinliğini ve gün batımındaki ışık yansımasını gösterir.
               </p>
             </Reveal>
 
@@ -472,13 +472,13 @@ function ProjectDetail() {
         >
           <div className="space-y-2">
             <span className="font-mono text-xs uppercase tracking-[0.25em] text-terracotta">
-              SÄ±radaki Proje â†’
+              Sıradaki Proje →
             </span>
             <p className="font-display text-3xl font-bold text-foreground transition-colors group-hover:text-primary lg:text-5xl">
               {next.title}
             </p>
             <p className="text-sm text-foreground/60">
-              {next.location} Â· {next.category}
+              {next.location} · {next.category}
             </p>
           </div>
 

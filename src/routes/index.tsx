@@ -1,4 +1,4 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, useRef } from "react";
 import { ArrowRight, ArrowUpRight, ChevronRight, Compass, Sparkles } from "lucide-react";
 import { projects, detailImage } from "@/lib/projects";
@@ -15,19 +15,19 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "TERRA â€” Peyzaj MimarlÄ±ÄŸÄ± & DÄ±ÅŸ MekÃ¢n TasarÄ±mÄ±" },
+      { title: "TERRA — Peyzaj Mimarlığı & Dış Mekân Tasarımı" },
       {
         name: "description",
         content:
-          "TERRA Peyzaj MimarlÄ±ÄŸÄ±; villa bahÃ§eleri, otel avlularÄ± ve kamusal alanlar iÃ§in doÄŸayla uyumlu, heykelsi ve yaÅŸayan dÄ±ÅŸ mekÃ¢nlar tasarlar.",
+          "TERRA Peyzaj Mimarlığı; villa bahçeleri, otel avluları ve kamusal alanlar için doğayla uyumlu, heykelsi ve yaşayan dış mekânlar tasarlar.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "TERRA â€” Peyzaj MimarlÄ±ÄŸÄ±" },
+      { property: "og:title", content: "TERRA — Peyzaj Mimarlığı" },
       {
         property: "og:description",
         content:
-          "Arazinin hafÄ±zasÄ±nÄ± koruyan, iklime uyumlu ve zamanla olgunlaÅŸan peyzaj mimarlÄ±ÄŸÄ±.",
+          "Arazinin hafızasını koruyan, iklime uyumlu ve zamanla olgunlaşan peyzaj mimarlığı.",
       },
     ],
   }),
@@ -37,47 +37,47 @@ export const Route = createFileRoute("/")({
 const services = [
   {
     n: "01",
-    t: "Peyzaj MimarlÄ±ÄŸÄ±",
-    d: "TopoÄŸrafya analizinden uygulama Ã§izimlerine kadar araziyle bÃ¼tÃ¼nleÅŸen mekÃ¢nsal kurgu.",
-    tag: "TasarÄ±m",
+    t: "Peyzaj Mimarlığı",
+    d: "Topoğrafya analizinden uygulama çizimlerine kadar araziyle bütünleşen mekânsal kurgu.",
+    tag: "Tasarım",
   },
   {
     n: "02",
-    t: "Bitkisel TasarÄ±m",
-    d: "Akdeniz ve Ege iklimine dayanÄ±klÄ±, su tÃ¼ketimini minimize eden mevsimsel bitki paletleri.",
+    t: "Bitkisel Tasarım",
+    d: "Akdeniz ve Ege iklimine dayanıklı, su tüketimini minimize eden mevsimsel bitki paletleri.",
     tag: "Ekoloji",
   },
   {
     n: "03",
-    t: "Su ve YansÄ±ma Ã–ÄŸeleri",
-    d: "YansÄ±ma havuzlarÄ±, taÅŸ kanallar ve mikro-klima oluÅŸturan sessiz su yÃ¼zeyleri.",
+    t: "Su ve Yansıma Öğeleri",
+    d: "Yansıma havuzları, taş kanallar ve mikro-klima oluşturan sessiz su yüzeyleri.",
     tag: "Mimari",
   },
   {
     n: "04",
-    t: "Peyzaj AydÄ±nlatmasÄ±",
-    d: "Gece gÃ¶kyÃ¼zÃ¼nÃ¼ koruyan, dÃ¼ÅŸÃ¼k seviyeli ve malzeme dokusunu vurgulayan Ä±ÅŸÄ±k senaryolarÄ±.",
-    tag: "AydÄ±nlatma",
+    t: "Peyzaj Aydınlatması",
+    d: "Gece gökyüzünü koruyan, düşük seviyeli ve malzeme dokusunu vurgulayan ışık senaryoları.",
+    tag: "Aydınlatma",
   },
   {
     n: "05",
-    t: "Uygulama YÃ¶netimi",
-    d: "Åantiye denetimi, taÅŸ ve sert zemin iÅŸÃ§iliÄŸi ile sertifikalÄ± fidan temini kontrolÃ¼.",
-    tag: "Åantiye",
+    t: "Uygulama Yönetimi",
+    d: "Şantiye denetimi, taş ve sert zemin işçiliği ile sertifikalı fidan temini kontrolü.",
+    tag: "Şantiye",
   },
   {
     n: "06",
-    t: "OlgunlaÅŸma DanÄ±ÅŸmanlÄ±ÄŸÄ±",
-    d: "Ä°lk Ã¼Ã§ yÄ±l boyunca mevsimlik budama, toprak besleme ve geliÅŸim takibi.",
-    tag: "SÃ¼rdÃ¼rÃ¼lebilirlik",
+    t: "Olgunlaşma Danışmanlığı",
+    d: "İlk üç yıl boyunca mevsimlik budama, toprak besleme ve gelişim takibi.",
+    tag: "Sürdürülebilirlik",
   },
 ];
 
 const stats = [
-  { k: "18", l: "YÄ±l Deneyim", note: "2008'den gÃ¼nÃ¼mÃ¼ze" },
+  { k: "18", l: "Yıl Deneyim", note: "2008'den günümüze" },
   { k: "140+", l: "Tamamlanan Proje", note: "Konut, otel, kamusal" },
-  { k: "9", l: "Ulusal Ã–dÃ¼l", note: "Peyzaj ve kentsel tasarÄ±m" },
-  { k: "260.000 mÂ²", l: "Tasarlanan Alan", note: "Toplam arazi Ã¶lÃ§eÄŸi" },
+  { k: "9", l: "Ulusal Ödül", note: "Peyzaj ve kentsel tasarım" },
+  { k: "260.000 m²", l: "Tasarlanan Alan", note: "Toplam arazi ölçeği" },
 ];
 
 function Home() {
@@ -164,7 +164,7 @@ function Home() {
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/90 px-3.5 py-1.5 backdrop-blur-md">
               <span className="h-2 w-2 animate-pulse rounded-full bg-moss" />
               <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-primary">
-                Mimari Portfolyo Â· Vol. 2025/26
+                Mimari Portfolyo · Vol. 2025/26
               </span>
             </div>
 
@@ -202,7 +202,7 @@ function Home() {
                 params={{ slug: activeHero.slug }}
                 className="group inline-flex items-center gap-3 rounded-full bg-terracotta px-7 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-on-image shadow-xl transition-all duration-300 hover:bg-terracotta/90 hover:shadow-2xl"
               >
-                <span>Levha DetayÄ±nÄ± Ä°ncele</span>
+                <span>Levha Detayını İncele</span>
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
 
@@ -210,7 +210,7 @@ function Home() {
                 to="/projeler"
                 className="inline-flex items-center gap-2 rounded-full border border-offwhite/30 bg-anthracite/30 px-6 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-foreground backdrop-blur-md transition-colors hover:border-offwhite hover:bg-offwhite/10"
               >
-                <span>TÃ¼m Katalog</span>
+                <span>Tüm Katalog</span>
                 <ArrowUpRight size={14} />
               </Link>
             </div>
@@ -275,34 +275,34 @@ function Home() {
             <Reveal className="space-y-6 lg:col-span-5">
               <span className="inline-flex items-center gap-2 rounded-full border border-moss/30 bg-moss/15 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.3em] text-moss backdrop-blur-md">
                 <Compass size={12} className="text-primary" />
-                TasarÄ±m Felsefesi & RÃ¶lÃ¶ve
+                Tasarım Felsefesi & Rölöve
               </span>
               <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
-                DoÄŸanÄ±n topoÄŸrafyasÄ±yla kurgulanan mekÃ¢nlar.
+                Doğanın topoğrafyasıyla kurgulanan mekânlar.
               </h2>
 
               <p className="font-display text-xl font-medium leading-[1.4] text-primary sm:text-2xl">
-                "Bir bahÃ§e, yapÄ±ldÄ±ÄŸÄ± gÃ¼n deÄŸil; onuncu yÄ±lÄ±nda gerÃ§ek ruhuna kavuÅŸur. Bu yÃ¼zden
-                projelerimizi gÃ¶lgenin bÃ¼yÃ¼mesi, aÄŸaÃ§larÄ±n kÃ¶klenmesi ve mevsimlerin ritmi Ã¼zerine
-                inÅŸa ediyoruz."
+                "Bir bahçe, yapıldığı gün değil; onuncu yılında gerçek ruhuna kavuşur. Bu yüzden
+                projelerimizi gölgenin büyümesi, ağaçların köklenmesi ve mevsimlerin ritmi üzerine
+                inşa ediyoruz."
               </p>
 
               <div className="space-y-4 pt-4">
                 {[
                   {
                     no: "01",
-                    title: "Yer HafÄ±zasÄ± & TopoÄŸrafya",
-                    desc: "Her arazi, kendi topraÄŸÄ±, rÃ¼zgÃ¢r koridoru ve yerel aÄŸaÃ§ dokusuyla hikÃ¢yesini anlatÄ±r.",
+                    title: "Yer Hafızası & Topoğrafya",
+                    desc: "Her arazi, kendi toprağı, rüzgâr koridoru ve yerel ağaç dokusuyla hikâyesini anlatır.",
                   },
                   {
                     no: "02",
                     title: "Krokisel Geometri & Sadelik",
-                    desc: "Gereksiz sÃ¼sten arÄ±nmÄ±ÅŸ, net geometriler ve yerel doÄŸal taÅŸlarÄ±n dingin uyumu.",
+                    desc: "Gereksiz süsten arınmış, net geometriler ve yerel doğal taşların dingin uyumu.",
                   },
                   {
                     no: "03",
-                    title: "Ekolojik YaÄŸmur DÃ¶ngÃ¼sÃ¼",
-                    desc: "KurakÃ§Ä±l bitkiler, yaÄŸmur hasadÄ± ve kendi kendini onarabilen biyolojik dÃ¶ngÃ¼ler.",
+                    title: "Ekolojik Yağmur Döngüsü",
+                    desc: "Kurakçıl bitkiler, yağmur hasadı ve kendi kendini onarabilen biyolojik döngüler.",
                   },
                 ].map((item) => (
                   <div
@@ -340,10 +340,10 @@ function Home() {
           <Reveal className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <span className="inline-block rounded-full border border-moss/30 bg-forest/20 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.3em] text-moss">
-                SeÃ§kiler & Levhalar
+                Seçkiler & Levhalar
               </span>
               <h2 className="mt-4 font-display text-4xl font-bold tracking-tight text-foreground lg:text-5xl">
-                Ã–ne Ã‡Ä±kan Ã‡alÄ±ÅŸmalar
+                Öne Çıkan Çalışmalar
               </h2>
             </div>
 
@@ -351,7 +351,7 @@ function Home() {
               to="/projeler"
               className="group inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary hover:text-terracotta"
             >
-              <span>TÃ¼m Projeleri GÃ¶rÃ¼ntÃ¼le</span>
+              <span>Tüm Projeleri Görüntüle</span>
               <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </Reveal>
@@ -398,7 +398,7 @@ function Home() {
                         {projects[0]!.title}
                       </h3>
                       <p className="mt-1 text-xs text-primary sm:text-sm">
-                        {projects[0]!.location} Â· {projects[0]!.area} Â· {projects[0]!.elevation}
+                        {projects[0]!.location} · {projects[0]!.area} · {projects[0]!.elevation}
                       </p>
                     </div>
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-on-image backdrop-blur-md transition-transform group-hover:scale-110">
@@ -448,7 +448,7 @@ function Home() {
                         {projects[1]!.title}
                       </h3>
                       <p className="mt-1 text-xs text-primary">
-                        {projects[1]!.location} Â· {projects[1]!.year}
+                        {projects[1]!.location} · {projects[1]!.year}
                       </p>
                     </div>
                     <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-on-image backdrop-blur-md transition-transform group-hover:scale-110">
@@ -498,7 +498,7 @@ function Home() {
                         {projects[2]!.title}
                       </h3>
                       <p className="mt-1 text-xs text-primary">
-                        {projects[2]!.location} Â· {projects[2]!.area}
+                        {projects[2]!.location} · {projects[2]!.area}
                       </p>
                     </div>
                     <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-on-image backdrop-blur-md transition-transform group-hover:scale-110">
@@ -548,7 +548,7 @@ function Home() {
                         {projects[3]!.title}
                       </h3>
                       <p className="mt-1 text-xs text-primary">
-                        {projects[3]!.location} Â· {projects[3]!.year}
+                        {projects[3]!.location} · {projects[3]!.year}
                       </p>
                     </div>
                     <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-on-image backdrop-blur-md transition-transform group-hover:scale-110">
@@ -580,9 +580,9 @@ function Home() {
                 Hareket Halindeki Peyzaj
               </h2>
               <p className="max-w-xl text-sm leading-relaxed text-foreground/70">
-                Peyzaj statik bir fotoÄŸraf deÄŸil, rÃ¼zgÃ¢rla dalgalanan otlar ve gÃ¼n Ä±ÅŸÄ±ÄŸÄ±yla devinen
-                bir deneyimdir. Projelerimizi masaÃ¼stÃ¼ ve mobil perspektiflerinden keÅŸfedin.
-                Ekranlara tÄ±klayarak detay sayfalarÄ±na geÃ§ebilirsiniz.
+                Peyzaj statik bir fotoğraf değil, rüzgârla dalgalanan otlar ve gün ışığıyla devinen
+                bir deneyimdir. Projelerimizi masaüstü ve mobil perspektiflerinden keşfedin.
+                Ekranlara tıklayarak detay sayfalarına geçebilirsiniz.
               </p>
             </div>
 
@@ -624,10 +624,10 @@ function Home() {
         <div className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-10">
           <Reveal className="space-y-4">
             <span className="inline-block rounded-full border border-moss/30 bg-moss/20 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.3em] text-moss">
-              Hizmet AlanlarÄ±mÄ±z
+              Hizmet Alanlarımız
             </span>
             <h2 className="font-display text-4xl font-bold tracking-tight text-foreground lg:text-5xl">
-              Konsept Fikirden YaÅŸayan BahÃ§eye
+              Konsept Fikirden Yaşayan Bahçeye
             </h2>
           </Reveal>
 
@@ -668,15 +668,15 @@ function Home() {
           <div className="grid items-center gap-16 lg:grid-cols-12">
             <Reveal className="space-y-8 lg:col-span-6">
               <span className="inline-block rounded-full border border-moss/30 bg-forest/30 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.3em] text-moss">
-                Ekolojik YaklaÅŸÄ±m & Arazi Kesiti
+                Ekolojik Yaklaşım & Arazi Kesiti
               </span>
               <h2 className="font-display text-4xl font-bold leading-tight text-foreground lg:text-5xl">
-                Daha az sulama, daha derin gÃ¶lge.
+                Daha az sulama, daha derin gölge.
               </h2>
               <p className="text-sm leading-relaxed text-foreground/75 lg:text-base">
-                Akdeniz iklimi giderek daha sÄ±cak ve kurak yazlar getiriyor. Peyzaj tasarÄ±mlarÄ±mÄ±zda
-                sulama ihtiyacÄ±nÄ± en aza indiren drenaj ve yaÄŸmur suyu tutma stratejileri
-                kullanÄ±yoruz. AydÄ±nlatmada karanlÄ±k gÃ¶kyÃ¼zÃ¼ ilkelerine baÄŸlÄ± kalarak faunanÄ±n
+                Akdeniz iklimi giderek daha sıcak ve kurak yazlar getiriyor. Peyzaj tasarımlarımızda
+                sulama ihtiyacını en aza indiren drenaj ve yağmur suyu tutma stratejileri
+                kullanıyoruz. Aydınlatmada karanlık gökyüzü ilkelerine bağlı kalarak faunanın
                 dengesini koruyoruz.
               </p>
 
@@ -704,7 +704,7 @@ function Home() {
               <div className="overflow-hidden rounded-3xl border border-border shadow-2xl">
                 <img
                   src={detailImage}
-                  alt="DoÄŸal taÅŸ ve bitkisel tasarÄ±m detayÄ±"
+                  alt="Doğal taş ve bitkisel tasarım detayı"
                   className="h-[480px] w-full object-cover transition-transform duration-1000 hover:scale-105 lg:h-[600px]"
                   loading="lazy"
                 />
@@ -712,7 +712,7 @@ function Home() {
               <div className="absolute -bottom-6 -right-6 hidden rounded-2xl border border-border bg-card/95 p-6 text-foreground shadow-2xl backdrop-blur-xl sm:block lg:max-w-xs">
                 <p className="font-display text-lg font-bold text-primary">%45 Su Tasarrufu</p>
                 <p className="mt-1 text-xs text-foreground/75">
-                  YaÄŸmur bahÃ§eleri ve kuraklÄ±ÄŸa direnÃ§li yerel bitkilendirme kurgusuyla.
+                  Yağmur bahçeleri ve kuraklığa dirençli yerel bitkilendirme kurgusuyla.
                 </p>
               </div>
             </Reveal>
@@ -729,21 +729,21 @@ function Home() {
         <div className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-10">
           <Reveal className="space-y-6">
             <span className="inline-block rounded-full bg-offwhite/15 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.3em] text-primary backdrop-blur-md">
-              GeleceÄŸi Birlikte KuralÄ±m
+              Geleceği Birlikte Kuralım
             </span>
             <h2 className="max-w-4xl font-display text-4xl font-bold leading-tight text-foreground lg:text-6xl">
-              Arazinizi birlikte dinleyelim, yaÅŸayan bir peyzaja dÃ¶nÃ¼ÅŸtÃ¼relim.
+              Arazinizi birlikte dinleyelim, yaşayan bir peyzaja dönüştürelim.
             </h2>
             <p className="max-w-xl text-base leading-relaxed text-foreground/80">
-              Yeni bir villa projesi, otel avlusu renovasyonu veya kurumsal aÃ§Ä±k alan tasarÄ±mÄ± iÃ§in
-              stÃ¼dyomuzla iletiÅŸime geÃ§in.
+              Yeni bir villa projesi, otel avlusu renovasyonu veya kurumsal açık alan tasarımı için
+              stüdyomuzla iletişime geçin.
             </p>
             <div className="pt-4">
               <Link
                 to="/iletisim"
                 className="group inline-flex items-center gap-3 rounded-full bg-terracotta px-8 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-on-image shadow-xl transition-all duration-300 hover:bg-terracotta/90 hover:shadow-2xl"
               >
-                <span>Ä°letiÅŸime GeÃ§in</span>
+                <span>İletişime Geçin</span>
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
             </div>

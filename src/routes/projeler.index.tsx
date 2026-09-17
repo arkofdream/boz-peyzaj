@@ -1,4 +1,4 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowUpRight, BookOpen, Compass, Filter, Layers, Sparkles } from "lucide-react";
 import { projects } from "@/lib/projects";
@@ -9,19 +9,19 @@ import { TopoContourBackground, GraphicScaleBar } from "@/components/site/Archit
 export const Route = createFileRoute("/projeler/")({
   head: () => ({
     meta: [
-      { title: "Projeler â€” TERRA Peyzaj MimarlÄ±ÄŸÄ± ArÅŸivi & KataloÄŸu" },
+      { title: "Projeler — TERRA Peyzaj Mimarlığı Arşivi & Kataloğu" },
       {
         name: "description",
         content:
-          "Villa bahÃ§eleri, kamusal parklar, otel avlularÄ± ve kentsel aÃ§Ä±k alanlar: TERRA Peyzaj MimarlÄ±ÄŸÄ± proje levhalarÄ±, ÅŸablonlarÄ± ve malzeme kartelalarÄ±.",
+          "Villa bahçeleri, kamusal parklar, otel avluları ve kentsel açık alanlar: TERRA Peyzaj Mimarlığı proje levhaları, şablonları ve malzeme kartelaları.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "Projeler & Katalog â€” TERRA Peyzaj MimarlÄ±ÄŸÄ±" },
+      { property: "og:title", content: "Projeler & Katalog — TERRA Peyzaj Mimarlığı" },
       {
         property: "og:description",
         content:
-          "Mimari Ã§izim Ã¶lÃ§ekleri, bitkisel tasarÄ±mlar ve malzeme paletleriyle zenginleÅŸtirilmiÅŸ peyzaj kataloÄŸu.",
+          "Mimari çizim ölçekleri, bitkisel tasarımlar ve malzeme paletleriyle zenginleştirilmiş peyzaj kataloğu.",
       },
     ],
   }),
@@ -30,9 +30,9 @@ export const Route = createFileRoute("/projeler/")({
 
 function ProjectsPage() {
   const [viewMode, setViewMode] = useState<"catalog" | "grid">("catalog");
-  const categories = ["TÃ¼mÃ¼", ...Array.from(new Set(projects.map((p) => p.category)))];
-  const [filter, setFilter] = useState("TÃ¼mÃ¼");
-  const list = filter === "TÃ¼mÃ¼" ? projects : projects.filter((p) => p.category === filter);
+  const categories = ["Tümü", ...Array.from(new Set(projects.map((p) => p.category)))];
+  const [filter, setFilter] = useState("Tümü");
+  const list = filter === "Tümü" ? projects : projects.filter((p) => p.category === filter);
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-background pattern-overlay pt-32 text-foreground lg:pt-40">
@@ -47,10 +47,10 @@ function ProjectsPage() {
           <div className="flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center gap-2 rounded-full border border-moss/30 bg-moss/20 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.3em] text-moss">
               <Sparkles size={12} className="text-primary" />
-              Mimari ArÅŸiv & Katalog
+              Mimari Arşiv & Katalog
             </span>
             <span className="font-mono text-xs uppercase tracking-[0.2em] text-primary/70">
-              (VOL. 2025/26 Â· {projects.length} LEVHA)
+              (VOL. 2025/26 · {projects.length} LEVHA)
             </span>
           </div>
 
@@ -66,7 +66,7 @@ function ProjectsPage() {
               }`}
             >
               <BookOpen size={13} />
-              <span>Katalog & Åablonlar</span>
+              <span>Katalog & Şablonlar</span>
             </button>
             <button
               type="button"
@@ -78,7 +78,7 @@ function ProjectsPage() {
               }`}
             >
               <Layers size={13} />
-              <span>Galeri IzgarasÄ±</span>
+              <span>Galeri Izgarası</span>
             </button>
           </div>
         </div>
@@ -86,12 +86,12 @@ function ProjectsPage() {
         <div className="mt-8 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <div>
             <h1 className="font-display text-5xl font-bold tracking-tight text-foreground lg:text-7xl">
-              Peyzaj LevhalarÄ± & ArÅŸiv
+              Peyzaj Levhaları & Arşiv
             </h1>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-foreground/75">
-              TopraÄŸÄ±n, iklimin ve mimarinin buluÅŸtuÄŸu noktada; zamansÄ±z estetik ve ekolojik
-              duyarlÄ±lÄ±kla kurgulanmÄ±ÅŸ peyzaj projelerimiz. Ã‡izim Ã¶lÃ§ekleri, bitki tÃ¼rleri ve
-              malzeme kartelalarÄ±yla monografi formatÄ±nda inceleyin.
+              Toprağın, iklimin ve mimarinin buluştuğu noktada; zamansız estetik ve ekolojik
+              duyarlılıkla kurgulanmış peyzaj projelerimiz. Çizim ölçekleri, bitki türleri ve
+              malzeme kartelalarıyla monografi formatında inceleyin.
             </p>
           </div>
           <div className="hidden pb-2 lg:block">
@@ -212,12 +212,12 @@ function ProjectsPage() {
                             {p.title}
                           </h2>
                           <span className="shrink-0 font-mono text-xs text-on-image/60">
-                            {p.area} Â· {p.elevation}
+                            {p.area} · {p.elevation}
                           </span>
                         </div>
 
                         <p className="mt-1 font-sans text-xs uppercase tracking-[0.15em] text-moss">
-                          {p.location} Â· {p.year}
+                          {p.location} · {p.year}
                         </p>
 
                         <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-foreground/75">
