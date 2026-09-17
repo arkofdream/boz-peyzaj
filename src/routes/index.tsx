@@ -1,6 +1,6 @@
 ﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, useRef } from "react";
-import { ArrowRight, ArrowUpRight, ChevronRight, Compass, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ChevronRight, Compass, Sparkles, Trees, PenTool, Ruler } from "lucide-react";
 import { projects, detailImage } from "@/lib/projects";
 import { Reveal } from "@/components/site/Reveal";
 import { LaptopMockup, PhoneMockup } from "@/components/site/Mockups";
@@ -10,6 +10,7 @@ import {
   MasterplanCroquis,
   ElevationSectionCroquis,
   BuildingSilhouetteSketch,
+  TreeClusterSketch,
   GraphicScaleBar,
 } from "@/components/site/ArchitecturalCroquis";
 
@@ -264,6 +265,8 @@ function Home() {
 
       {/* 2. MANIFESTO & CROQUIS SKETCH SECTION (RICH ARCHITECTURAL GRADIENT) */}
       <section className="relative overflow-hidden bg-gradient-to-b from-background via-secondary to-background py-28 lg:py-36">
+        {/* Background Vectors */}
+        <div className="pointer-events-none absolute top-40 -left-64 w-[1000px] opacity-[0.03] rotate-[-5deg]"><TreeClusterSketch /></div>
         {/* Dynamic Topo Contour Lines */}
         <TopoContourBackground opacity={0.3} />
 
@@ -334,6 +337,8 @@ function Home() {
 
       {/* 3. FEATURED PROJECTS (EDITORIAL ASYMMETRIC GRID WITH BLUEPRINT AURA) */}
       <section className="relative overflow-hidden bg-background pattern-overlay py-28 lg:py-36">
+        {/* Background Vectors */}
+        <div className="pointer-events-none absolute bottom-0 -right-40 w-[800px] opacity-[0.04] rotate-[2deg]"><BuildingSilhouetteSketch /></div>
         <div className="pointer-events-none absolute inset-0 croquis-grid opacity-30" />
         <div className="pointer-events-none absolute right-10 top-1/4 h-96 w-96 rounded-full bg-forest/25 blur-3xl" />
 
@@ -620,6 +625,9 @@ function Home() {
 
       {/* 6. SERVICES SECTION (RICH ARCHITECTURAL GRADIENT ATMOSPHERE) */}
       <section className="relative overflow-hidden bg-gradient-to-b from-background via-secondary to-background py-28 text-foreground lg:py-36">
+        {/* Background Vectors */}
+        <div className="pointer-events-none absolute top-20 -left-40 opacity-[0.03] rotate-[15deg]"><PenTool size={600} strokeWidth={0.5} /></div>
+        <div className="pointer-events-none absolute bottom-20 -right-40 opacity-[0.03] rotate-[-15deg]"><Ruler size={600} strokeWidth={0.5} /></div>
         <TopoContourBackground opacity={0.15} />
 
         <div className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-10">
@@ -663,6 +671,9 @@ function Home() {
 
       {/* 7. SUSTAINABILITY, STATS & SECTION CROQUIS */}
       <section className="relative overflow-hidden bg-gradient-to-b from-background via-secondary to-background py-28 text-foreground lg:py-36">
+        {/* Background Vectors */}
+        <div className="pointer-events-none absolute top-20 -left-40 opacity-[0.03] rotate-[15deg]"><PenTool size={600} strokeWidth={0.5} /></div>
+        <div className="pointer-events-none absolute bottom-20 -right-40 opacity-[0.03] rotate-[-15deg]"><Ruler size={600} strokeWidth={0.5} /></div>
         <div className="pointer-events-none absolute -right-40 top-1/4 h-96 w-96 rounded-full bg-moss/20 blur-3xl" />
 
         <div className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-10">
@@ -723,6 +734,8 @@ function Home() {
 
       {/* 8. FINAL CTA (PREMIUM FOREST ATMOSPHERE) */}
       <section className="relative overflow-hidden bg-gradient-to-r from-secondary via-background to-secondary py-28 text-foreground lg:py-36">
+        {/* Background Vectors */}
+        <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.02]"><Compass size={900} strokeWidth={0.5} /></div>
         <TopoContourBackground opacity={0.25} />
         <div className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full bg-moss/20 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-terracotta/20 blur-3xl" />
