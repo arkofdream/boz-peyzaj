@@ -94,7 +94,7 @@ export function TopoContourBackground({
         />
 
         {/* Blueprint coordinate grid crosses (+) */}
-        {[
+        {([
           [160, 180],
           [520, 180],
           [880, 180],
@@ -107,7 +107,7 @@ export function TopoContourBackground({
           [520, 780],
           [880, 780],
           [1240, 780],
-        ].map(([cx, cy], i) => (
+        ] satisfies Array<[number, number]>).map(([cx, cy], i) => (
           <g key={i} stroke="currentColor" strokeWidth="1" opacity="0.4">
             <line x1={cx - 8} y1={cy} x2={cx + 8} y2={cy} />
             <line x1={cx} y1={cy - 8} x2={cx} y2={cy + 8} />
@@ -122,23 +122,23 @@ export function TopoContourBackground({
 export function MasterplanCroquis({ className = "" }: { className?: string }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-3xl border border-white/15 bg-[#121814]/90 p-6 backdrop-blur-xl sm:p-8 ${className}`}
+      className={`relative overflow-hidden rounded-3xl border border-on-image/15 bg-[#121814]/90 p-6 backdrop-blur-xl sm:p-8 ${className}`}
     >
       {/* Blueprint corner registrations */}
-      <div className="pointer-events-none absolute left-3 top-3 font-mono text-[11px] text-white/40">
+      <div className="pointer-events-none absolute left-3 top-3 font-mono text-[11px] text-on-image/40">
         ⌜ TERRA / SKETCH 01
       </div>
-      <div className="pointer-events-none absolute right-3 top-3 font-mono text-[11px] text-white/40">
+      <div className="pointer-events-none absolute right-3 top-3 font-mono text-[11px] text-on-image/40">
         1:200 ⌝
       </div>
-      <div className="pointer-events-none absolute bottom-3 left-3 font-mono text-[11px] text-white/40">
+      <div className="pointer-events-none absolute bottom-3 left-3 font-mono text-[11px] text-on-image/40">
         ⌞ KESİT A-A'
       </div>
-      <div className="pointer-events-none absolute bottom-3 right-3 font-mono text-[11px] text-white/40">
+      <div className="pointer-events-none absolute bottom-3 right-3 font-mono text-[11px] text-on-image/40">
         KOT +42.00 ⌟
       </div>
 
-      <div className="flex items-center justify-between border-b border-white/10 pb-4">
+      <div className="flex items-center justify-between border-b border-on-image/10 pb-4">
         <div>
           <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-moss">
             Vaziyet Krokisi & Peyzaj Kurgusu
@@ -411,11 +411,11 @@ export function MasterplanCroquis({ className = "" }: { className?: string }) {
         </svg>
       </div>
 
-      <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-xs text-white/60">
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-xs text-on-image/60">
         <span className="font-mono text-[10px] uppercase tracking-wider text-moss">
           • Kademeli Gabion Duvarlar & Kuru Dere Yatağı
         </span>
-        <span className="font-mono text-[10px] text-white/40">
+        <span className="font-mono text-[10px] text-on-image/40">
           TERRA Dış Mekân Kurgu Çizimi · Proje Rev. 04
         </span>
       </div>
@@ -427,8 +427,8 @@ export function MasterplanCroquis({ className = "" }: { className?: string }) {
 export function GraphicScaleBar({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center gap-2 font-mono text-[10px] text-sand ${className}`}>
-      <span className="text-white/50">0</span>
-      <div className="flex h-1.5 w-24 overflow-hidden border border-white/30">
+      <span className="text-on-image/50">0</span>
+      <div className="flex h-1.5 w-24 overflow-hidden border border-on-image/30">
         <div className="w-1/4 bg-white" />
         <div className="w-1/4 bg-transparent" />
         <div className="w-1/4 bg-white" />
@@ -444,13 +444,13 @@ export function GraphicScaleBar({ className = "" }: { className?: string }) {
 export function ElevationSectionCroquis({ className = "" }: { className?: string }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-2xl border border-white/15 bg-[#121614]/85 p-5 backdrop-blur-md ${className}`}
+      className={`relative overflow-hidden rounded-2xl border border-on-image/15 bg-[#121614]/85 p-5 backdrop-blur-md ${className}`}
     >
-      <div className="flex items-center justify-between border-b border-white/10 pb-3">
+      <div className="flex items-center justify-between border-b border-on-image/10 pb-3">
         <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-warm-yellow">
           Kesit A-A' Arazi Eğim Şeması
         </span>
-        <span className="font-mono text-[10px] text-white/50">KOT +48.00 / +32.00</span>
+        <span className="font-mono text-[10px] text-on-image/50">KOT +48.00 / +32.00</span>
       </div>
 
       <div className="mt-4 aspect-[21/9] w-full">

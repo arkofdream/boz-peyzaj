@@ -34,7 +34,7 @@ export function ProjectCatalog() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#0d120f] via-[#121c16] to-[#0d120f] py-28 text-offwhite lg:py-36">
+    <section className="relative overflow-hidden bg-gradient-to-b from-background via-secondary to-background py-28 text-foreground lg:py-36">
       {/* Background Topo & Blueprint Grid */}
       <TopoContourBackground opacity={0.25} />
       <div className="pointer-events-none absolute inset-0 croquis-grid opacity-30" />
@@ -47,17 +47,17 @@ export function ProjectCatalog() {
           <div className="space-y-3">
             <div className="flex items-center gap-2">
               <span className="flex items-center gap-2 rounded-full bg-moss/20 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.25em] text-moss">
-                <BookOpen size={13} className="text-sand" />
+                <BookOpen size={13} className="text-primary" />
                 Mimari Portfolyo Kataloğu
               </span>
-              <span className="hidden font-mono text-xs text-offwhite/40 sm:inline">
+              <span className="hidden font-mono text-xs text-foreground/40 sm:inline">
                 VOL. 2025/26
               </span>
             </div>
-            <h2 className="font-display text-4xl font-bold tracking-tight text-offwhite sm:text-5xl lg:text-6xl">
+            <h2 className="font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
               Peyzaj Levhaları & Şablonlar
             </h2>
-            <p className="max-w-xl text-sm leading-relaxed text-offwhite/70 sm:text-base">
+            <p className="max-w-xl text-sm leading-relaxed text-foreground/70 sm:text-base">
               Müşterilerimiz ve mimari iş ortaklarımız için hazırlanan interaktif proje katalog
               sayfaları, malzeme kartelaları ve iklime duyarlı peyzaj şablonları.
             </p>
@@ -69,14 +69,14 @@ export function ProjectCatalog() {
               <GraphicScaleBar />
             </div>
 
-            <div className="flex items-center gap-2 rounded-full border border-offwhite/15 bg-black/40 p-1.5 backdrop-blur-md">
+            <div className="flex items-center gap-2 rounded-full border border-border bg-card/90 p-1.5 backdrop-blur-md">
               <button
                 type="button"
                 onClick={() => setActiveTab("lookbook")}
                 className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] transition-all duration-300 ${
                   activeTab === "lookbook"
-                    ? "bg-terracotta text-white shadow-md"
-                    : "text-offwhite/70 hover:text-white"
+                    ? "bg-terracotta text-on-image shadow-md"
+                    : "text-foreground/70 hover:text-on-image"
                 }`}
               >
                 <Layers size={14} />
@@ -87,8 +87,8 @@ export function ProjectCatalog() {
                 onClick={() => setActiveTab("templates")}
                 className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] transition-all duration-300 ${
                   activeTab === "templates"
-                    ? "bg-forest text-sand shadow-md"
-                    : "text-offwhite/70 hover:text-white"
+                    ? "bg-forest text-primary shadow-md"
+                    : "text-foreground/70 hover:text-on-image"
                 }`}
               >
                 <Compass size={14} />
@@ -104,20 +104,20 @@ export function ProjectCatalog() {
         {activeTab === "lookbook" && (
           <div className="mt-14 space-y-8">
             {/* Folio Plate Card */}
-            <div className="relative rounded-3xl border border-white/15 bg-black/60 p-6 shadow-2xl backdrop-blur-xl sm:p-10 lg:p-12">
+            <div className="relative rounded-3xl border border-border bg-card/95 p-6 shadow-2xl backdrop-blur-xl sm:p-10 lg:p-12">
               {/* Folio Top Technical Metadata Bar */}
-              <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-6 font-mono text-[11px] uppercase tracking-[0.25em] text-sand">
+              <div className="flex flex-wrap items-center justify-between gap-4 border-b border-border pb-6 font-mono text-[11px] uppercase tracking-[0.25em] text-primary">
                 <div className="flex items-center gap-4">
-                  <span className="rounded-md bg-forest/80 px-2.5 py-1 text-sand font-bold">
+                  <span className="rounded-md bg-forest/80 px-2.5 py-1 text-primary font-bold">
                     {currentProject.plateNo}
                   </span>
                   <span>{currentProject.drawingScale}</span>
-                  <span className="hidden sm:inline text-white/40">|</span>
+                  <span className="hidden sm:inline text-on-image/40">|</span>
                   <span className="hidden sm:inline">{currentProject.elevation}</span>
                 </div>
-                <div className="flex items-center gap-4 text-offwhite/70">
+                <div className="flex items-center gap-4 text-foreground/70">
                   <span>{currentProject.coordinates}</span>
-                  <span className="rounded-full bg-white/10 px-2.5 py-0.5 text-[10px] text-warm-yellow">
+                  <span className="rounded-full bg-secondary px-2.5 py-0.5 text-[10px] text-warm-yellow">
                     {currentProject.category}
                   </span>
                 </div>
@@ -126,18 +126,18 @@ export function ProjectCatalog() {
               {/* Spread Main Content */}
               <div className="mt-8 grid grid-cols-1 items-stretch gap-10 lg:grid-cols-12 lg:gap-12">
                 {/* Left: Large Catalog Image with Corner Crosshairs (7 cols) */}
-                <div className="relative overflow-hidden rounded-2xl bg-black lg:col-span-7">
+                <div className="relative overflow-hidden rounded-2xl bg-anthracite lg:col-span-7">
                   {/* Corner Crosshairs */}
-                  <div className="pointer-events-none absolute left-3 top-3 z-20 font-mono text-xs text-white/50">
+                  <div className="pointer-events-none absolute left-3 top-3 z-20 font-mono text-xs text-on-image/50">
                     +
                   </div>
-                  <div className="pointer-events-none absolute right-3 top-3 z-20 font-mono text-xs text-white/50">
+                  <div className="pointer-events-none absolute right-3 top-3 z-20 font-mono text-xs text-on-image/50">
                     +
                   </div>
-                  <div className="pointer-events-none absolute bottom-3 left-3 z-20 font-mono text-xs text-white/50">
+                  <div className="pointer-events-none absolute bottom-3 left-3 z-20 font-mono text-xs text-on-image/50">
                     +
                   </div>
-                  <div className="pointer-events-none absolute bottom-3 right-3 z-20 font-mono text-xs text-white/50">
+                  <div className="pointer-events-none absolute bottom-3 right-3 z-20 font-mono text-xs text-on-image/50">
                     +
                   </div>
 
@@ -151,15 +151,15 @@ export function ProjectCatalog() {
                     {/* Gradient Overlay & Stamp */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
 
-                    <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-white">
+                    <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-on-image">
                       <div>
-                        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-sand/80">
+                        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary/80">
                           {currentProject.templateName}
                         </span>
                         <h3 className="mt-1 font-display text-2xl font-bold sm:text-3xl">
                           {currentProject.title}
                         </h3>
-                        <p className="text-xs text-white/75 sm:text-sm">
+                        <p className="text-xs text-on-image/75 sm:text-sm">
                           {currentProject.location} · {currentProject.area}
                         </p>
                       </div>
@@ -167,7 +167,7 @@ export function ProjectCatalog() {
                       <Link
                         to="/projeler/$slug"
                         params={{ slug: currentProject.slug }}
-                        className="flex h-11 w-11 items-center justify-center rounded-full bg-terracotta text-white shadow-lg transition-transform hover:scale-110"
+                        className="flex h-11 w-11 items-center justify-center rounded-full bg-terracotta text-on-image shadow-lg transition-transform hover:scale-110"
                         title="Proje Dosyasını Aç"
                       >
                         <ArrowUpRight size={18} />
@@ -183,20 +183,20 @@ export function ProjectCatalog() {
                       <span className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
                         Tasarım Özeti & Hikâye
                       </span>
-                      <span className="font-mono text-xs text-sand/60">
+                      <span className="font-mono text-xs text-primary/60">
                         Yıl: {currentProject.year}
                       </span>
                     </div>
-                    <p className="text-sm leading-relaxed text-offwhite/85">
+                    <p className="text-sm leading-relaxed text-foreground/85">
                       {currentProject.summary}
                     </p>
                   </div>
 
                   {/* Plant Palette (Bitki Kartelası) */}
-                  <div className="rounded-xl border border-white/10 bg-white/5 p-4 space-y-3">
-                    <div className="flex items-center justify-between text-xs font-mono uppercase tracking-[0.18em] text-sand">
+                  <div className="rounded-xl border border-border bg-card/80 p-4 space-y-3">
+                    <div className="flex items-center justify-between text-xs font-mono uppercase tracking-[0.18em] text-primary">
                       <span>Bitkisel Palet</span>
-                      <span className="text-[10px] text-offwhite/50">
+                      <span className="text-[10px] text-foreground/50">
                         {currentProject.plants.length} Tür
                       </span>
                     </div>
@@ -204,11 +204,11 @@ export function ProjectCatalog() {
                       {currentProject.plants.map((pl) => (
                         <div
                           key={pl.name}
-                          className="rounded-lg bg-black/40 p-2.5 text-left border border-white/5"
+                          className="rounded-lg bg-card/90 p-2.5 text-left border border-on-image/5"
                         >
-                          <p className="font-display text-xs font-semibold text-white">{pl.name}</p>
+                          <p className="font-display text-xs font-semibold text-on-image">{pl.name}</p>
                           <p className="italic text-[10px] text-moss">{pl.botanical}</p>
-                          <span className="mt-1 inline-block rounded bg-white/10 px-1.5 py-0.5 font-mono text-[9px] text-sand/80">
+                          <span className="mt-1 inline-block rounded bg-secondary px-1.5 py-0.5 font-mono text-[9px] text-primary/80">
                             {pl.tag}
                           </span>
                         </div>
@@ -217,25 +217,25 @@ export function ProjectCatalog() {
                   </div>
 
                   {/* Material & Texture Swatches (Malzeme Kartelası) */}
-                  <div className="rounded-xl border border-white/10 bg-white/5 p-4 space-y-3">
-                    <div className="flex items-center justify-between text-xs font-mono uppercase tracking-[0.18em] text-sand">
+                  <div className="rounded-xl border border-border bg-card/80 p-4 space-y-3">
+                    <div className="flex items-center justify-between text-xs font-mono uppercase tracking-[0.18em] text-primary">
                       <span>Materyal Numuneleri</span>
-                      <span className="text-[10px] text-offwhite/50">Doğal & Yapısal</span>
+                      <span className="text-[10px] text-foreground/50">Doğal & Yapısal</span>
                     </div>
                     <div className="grid grid-cols-3 gap-2">
                       {currentProject.materials.map((mat) => (
                         <div
                           key={mat.name}
-                          className="rounded-lg bg-black/40 p-2.5 text-center border border-white/5"
+                          className="rounded-lg bg-card/90 p-2.5 text-center border border-on-image/5"
                         >
                           <div
-                            className="mx-auto mb-1.5 h-4 w-4 rounded-full border border-white/20 shadow-inner"
+                            className="mx-auto mb-1.5 h-4 w-4 rounded-full border border-on-image/20 shadow-inner"
                             style={{ backgroundColor: mat.color }}
                           />
-                          <p className="truncate font-display text-[11px] font-semibold text-white">
+                          <p className="truncate font-display text-[11px] font-semibold text-on-image">
                             {mat.name}
                           </p>
-                          <p className="truncate text-[9px] text-offwhite/60">{mat.texture}</p>
+                          <p className="truncate text-[9px] text-foreground/60">{mat.texture}</p>
                         </div>
                       ))}
                     </div>
@@ -246,7 +246,7 @@ export function ProjectCatalog() {
                     <Link
                       to="/projeler/$slug"
                       params={{ slug: currentProject.slug }}
-                      className="group flex w-full items-center justify-center gap-3 rounded-full bg-forest py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-sand shadow-lg transition-all duration-300 hover:bg-forest/80 hover:text-white"
+                      className="group flex w-full items-center justify-center gap-3 rounded-full bg-forest py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-primary shadow-lg transition-all duration-300 hover:bg-forest/80 hover:text-on-image"
                     >
                       <span>Proje Detay Dosyasına Git</span>
                       <ArrowRight
@@ -259,12 +259,12 @@ export function ProjectCatalog() {
               </div>
 
               {/* Plate Pagination & Arrows */}
-              <div className="mt-10 flex items-center justify-between border-t border-offwhite/10 pt-6">
+              <div className="mt-10 flex items-center justify-between border-t border-border pt-6">
                 <div className="flex items-center gap-3">
                   <button
                     type="button"
                     onClick={prevProject}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-offwhite/20 bg-white/5 text-offwhite transition-colors hover:bg-white/20"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/80 text-foreground transition-colors hover:bg-secondary"
                     aria-label="Önceki Levha"
                   >
                     <ChevronLeft size={18} />
@@ -272,12 +272,12 @@ export function ProjectCatalog() {
                   <button
                     type="button"
                     onClick={nextProject}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-offwhite/20 bg-white/5 text-offwhite transition-colors hover:bg-white/20"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/80 text-foreground transition-colors hover:bg-secondary"
                     aria-label="Sonraki Levha"
                   >
                     <ChevronRight size={18} />
                   </button>
-                  <span className="font-mono text-xs text-sand">
+                  <span className="font-mono text-xs text-primary">
                     {activeProjectIdx + 1} / {projects.length}
                   </span>
                 </div>
@@ -292,7 +292,7 @@ export function ProjectCatalog() {
                       className={`h-10 w-16 overflow-hidden rounded-md border transition-all ${
                         idx === activeProjectIdx
                           ? "border-terracotta ring-2 ring-terracotta/40 opacity-100 scale-105"
-                          : "border-white/20 opacity-50 hover:opacity-80"
+                          : "border-on-image/20 opacity-50 hover:opacity-80"
                       }`}
                     >
                       <img src={p.cover} alt={p.title} className="h-full w-full object-cover" />
@@ -318,8 +318,8 @@ export function ProjectCatalog() {
                   onClick={() => setActiveTemplateIdx(idx)}
                   className={`rounded-full px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.16em] transition-all duration-300 ${
                     idx === activeTemplateIdx
-                      ? "bg-forest font-bold text-sand shadow-lg ring-1 ring-sand/30"
-                      : "border border-offwhite/15 bg-white/5 text-offwhite/70 hover:bg-white/10 hover:text-white"
+                      ? "bg-forest font-bold text-primary shadow-lg ring-1 ring-sand/30"
+                      : "border border-border bg-card/80 text-foreground/70 hover:bg-secondary hover:text-on-image"
                   }`}
                 >
                   {t.title}
@@ -328,11 +328,11 @@ export function ProjectCatalog() {
             </div>
 
             {/* Template Featured Detail Card */}
-            <div className="rounded-3xl border border-offwhite/15 bg-[#1a1e1b]/90 p-6 sm:p-10 lg:p-12">
+            <div className="rounded-3xl border border-border bg-card/95 p-6 sm:p-10 lg:p-12">
               <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
                 {/* Left: Template Visual & Badges (6 cols) */}
                 <div className="space-y-6 lg:col-span-6">
-                  <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-black">
+                  <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-anthracite">
                     <img
                       src={currentTemplate.image}
                       alt={currentTemplate.title}
@@ -340,19 +340,19 @@ export function ProjectCatalog() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                     <div className="absolute left-4 top-4 flex flex-wrap gap-2">
-                      <span className="rounded-full bg-terracotta px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white">
+                      <span className="rounded-full bg-terracotta px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-on-image">
                         {currentTemplate.category}
                       </span>
-                      <span className="rounded-full bg-forest px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-sand">
+                      <span className="rounded-full bg-forest px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
                         {currentTemplate.climateZone}
                       </span>
                     </div>
 
                     <div className="absolute bottom-4 left-4 right-4">
-                      <p className="font-mono text-xs uppercase tracking-wider text-sand">
+                      <p className="font-mono text-xs uppercase tracking-wider text-primary">
                         Su Tüketim Stratejisi
                       </p>
-                      <p className="font-display text-lg font-bold text-white">
+                      <p className="font-display text-lg font-bold text-on-image">
                         {currentTemplate.waterNeed}
                       </p>
                     </div>
@@ -360,19 +360,19 @@ export function ProjectCatalog() {
 
                   {/* Template Characteristics */}
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-sand/70">
+                    <div className="rounded-xl border border-border bg-card/80 p-4">
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-primary/70">
                         Bakım İhtiyacı
                       </span>
-                      <p className="mt-1 font-display text-base font-bold text-white">
+                      <p className="mt-1 font-display text-base font-bold text-on-image">
                         {currentTemplate.maintenanceLevel} Bakım
                       </p>
                     </div>
-                    <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-sand/70">
+                    <div className="rounded-xl border border-border bg-card/80 p-4">
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-primary/70">
                         Uygulama Alanı
                       </span>
-                      <p className="mt-1 font-display text-base font-bold text-white">
+                      <p className="mt-1 font-display text-base font-bold text-on-image">
                         {currentTemplate.category}
                       </p>
                     </div>
@@ -385,25 +385,25 @@ export function ProjectCatalog() {
                     <span className="font-mono text-xs uppercase tracking-[0.25em] text-terracotta">
                       Peyzaj Tipolojisi Şablonu
                     </span>
-                    <h3 className="mt-2 font-display text-3xl font-bold text-white sm:text-4xl">
+                    <h3 className="mt-2 font-display text-3xl font-bold text-on-image sm:text-4xl">
                       {currentTemplate.title}
                     </h3>
-                    <p className="mt-1 font-mono text-sm text-sand/80">
+                    <p className="mt-1 font-mono text-sm text-primary/80">
                       {currentTemplate.subtitle}
                     </p>
-                    <p className="mt-4 text-sm leading-relaxed text-offwhite/80 sm:text-base">
+                    <p className="mt-4 text-sm leading-relaxed text-foreground/80 sm:text-base">
                       {currentTemplate.description}
                     </p>
                   </div>
 
                   {/* Key Features List */}
                   <div className="space-y-2.5">
-                    <p className="font-mono text-xs uppercase tracking-[0.2em] text-sand">
+                    <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">
                       Şablon Karakteristikleri:
                     </p>
                     <div className="grid gap-2 sm:grid-cols-2">
                       {currentTemplate.features.map((feat) => (
-                        <div key={feat} className="flex items-start gap-2 text-xs text-offwhite/85">
+                        <div key={feat} className="flex items-start gap-2 text-xs text-foreground/85">
                           <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-moss" />
                           <span>{feat}</span>
                         </div>
@@ -412,15 +412,15 @@ export function ProjectCatalog() {
                   </div>
 
                   {/* Key Plants Tag Cloud */}
-                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                    <p className="mb-2 font-mono text-xs uppercase tracking-[0.18em] text-sand">
+                  <div className="rounded-xl border border-border bg-card/80 p-4">
+                    <p className="mb-2 font-mono text-xs uppercase tracking-[0.18em] text-primary">
                       Önerilen Karakter Bitkileri:
                     </p>
                     <div className="flex flex-wrap gap-1.5">
                       {currentTemplate.keyPlants.map((kp) => (
                         <span
                           key={kp}
-                          className="rounded-md bg-forest/80 px-2.5 py-1 text-xs text-offwhite"
+                          className="rounded-md bg-forest/80 px-2.5 py-1 text-xs text-foreground"
                         >
                           {kp}
                         </span>
@@ -429,15 +429,15 @@ export function ProjectCatalog() {
                   </div>
 
                   {/* Materials Tag Cloud */}
-                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                    <p className="mb-2 font-mono text-xs uppercase tracking-[0.18em] text-sand">
+                  <div className="rounded-xl border border-border bg-card/80 p-4">
+                    <p className="mb-2 font-mono text-xs uppercase tracking-[0.18em] text-primary">
                       Uyumlu Mimari Malzemeler:
                     </p>
                     <div className="flex flex-wrap gap-1.5">
                       {currentTemplate.materials.map((mat) => (
                         <span
                           key={mat}
-                          className="rounded-md bg-white/10 px-2.5 py-1 text-xs text-sand"
+                          className="rounded-md bg-secondary px-2.5 py-1 text-xs text-primary"
                         >
                           {mat}
                         </span>
@@ -449,7 +449,7 @@ export function ProjectCatalog() {
                   <div className="pt-2">
                     <Link
                       to="/iletisim"
-                      className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-terracotta py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white shadow-lg transition-all duration-300 hover:bg-terracotta/90"
+                      className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-terracotta py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-on-image shadow-lg transition-all duration-300 hover:bg-terracotta/90"
                     >
                       <span>Bu Şablonu Projenize Uygulayın</span>
                       <ArrowRight size={15} />
