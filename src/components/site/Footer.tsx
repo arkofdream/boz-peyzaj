@@ -1,94 +1,99 @@
-﻿import { Link } from "@tanstack/react-router";
-import { ArrowUpRight, MapPin, Mail, Phone } from "lucide-react";
-import { BuildingSilhouetteSketch } from "./ArchitecturalCroquis";
+import { Link } from "@tanstack/react-router";
+import { Mail, Phone, Instagram, ArrowUpRight } from "lucide-react";
+
+const footerNav = [
+  { to: "/", label: "Anasayfa" },
+  { to: "/hizmetlerimiz", label: "Hizmetlerimiz" },
+  { to: "/projeler", label: "Projelerimiz" },
+  { to: "/vizyonumuz", label: "Vizyonumuz" },
+  { to: "/misyonumuz", label: "Misyonumuz" },
+  { to: "/iletisim", label: "İletişim" },
+];
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-anthracite/15 bg-anthracite text-offwhite overflow-hidden">
-      {/* Vector City/Landscape Silhouette Skyline in Footer */}
-      <div className="pointer-events-none absolute bottom-0 right-0 left-0 h-40 opacity-5 flex items-end justify-between">
-        <BuildingSilhouetteSketch className="w-1/3" />
-        <BuildingSilhouetteSketch className="w-1/3 scale-x-[-1]" />
-      </div>
-      <div className="mx-auto max-w-[1400px] px-6 py-20 lg:px-10 lg:py-28">
-        <div className="grid gap-14 lg:grid-cols-12">
-          {/* Brand & Manifesto */}
-          <div className="space-y-6 lg:col-span-5">
-            <div className="flex items-center gap-2">
-              <span className="font-display text-4xl font-bold tracking-[0.18em] text-offwhite">
-                TERRA
+    <footer className="relative border-t border-border/30 bg-anthracite text-offwhite">
+      <div className="mx-auto max-w-[1400px] px-6 py-16 lg:px-10 lg:py-24">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
+          {/* Brand */}
+          <div className="space-y-5 lg:col-span-5">
+            <div>
+              <span className="font-display text-3xl font-bold tracking-[0.1em] text-white">
+                BOZ PEYZAJ
               </span>
-              <span className="h-2 w-2 rounded-full bg-terracotta" />
+              <p className="mt-1 text-[11px] uppercase tracking-[0.3em] text-olive">
+                Peyzaj Mimarlığı
+              </p>
             </div>
-            <p className="text-[11px] uppercase tracking-[0.4em] text-sand/80">
-              Peyzaj Mimarlığı Stüdyosu
+            <p className="max-w-sm text-sm leading-relaxed text-white/60">
+              Doğayı ve modern mimariyi buluşturan, yaşam alanlarınızı profesyonel peyzaj tasarımıyla dönüştüren premium peyzaj mimarlığı stüdyosu.
             </p>
-            <p className="max-w-md text-sm leading-relaxed text-offwhite/70">
-              Arazinin topoğrafyasını, yerel bitki örtüsünü ve ışığını derinlemesine okuyarak; iklim
-              krizine dirençli, zamanla olgunlaşan ve yaşayan dış mekânlar kurguluyoruz.
-            </p>
-            <div className="pt-2">
+            <div className="pt-1">
               <Link
                 to="/iletisim"
-                className="group inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-warm-yellow transition-colors hover:text-offwhite"
+                className="group inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-olive transition-colors hover:text-white"
               >
-                <span>Bizimle Tanışın</span>
+                <span>Bizimle İletişime Geçin</span>
                 <ArrowUpRight
-                  size={15}
+                  size={14}
                   className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 />
               </Link>
             </div>
           </div>
 
-          {/* Nav Links */}
+          {/* Navigation */}
           <div className="lg:col-span-3 lg:col-start-7">
-            <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-sand/60">Keşfet</p>
-            <ul className="mt-6 space-y-3.5 text-sm tracking-wide text-offwhite/80">
-              <li>
-                <Link to="/" className="transition-colors hover:text-terracotta">
-                  Ana Sayfa
-                </Link>
-              </li>
-              <li>
-                <Link to="/projeler" className="transition-colors hover:text-terracotta">
-                  Projeler & Portfolyo
-                </Link>
-              </li>
-              <li>
-                <Link to="/hakkimizda" className="transition-colors hover:text-terracotta">
-                  Stüdyo & Yaklaşım
-                </Link>
-              </li>
-              <li>
-                <Link to="/iletisim" className="transition-colors hover:text-terracotta">
-                  İletişim & Randevu
-                </Link>
-              </li>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/40">
+              Sayfalar
+            </p>
+            <ul className="mt-5 space-y-3 text-sm text-white/60">
+              {footerNav.map((item) => (
+                <li key={item.to}>
+                  <Link
+                    to={item.to}
+                    className="transition-colors hover:text-olive"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Contact Details */}
-          <div className="lg:col-span-3">
-            <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-sand/60">Stüdyo</p>
-            <div className="mt-6 space-y-4 text-sm text-offwhite/80">
-              <div className="flex items-start gap-3">
-                <MapPin size={16} className="mt-0.5 shrink-0 text-moss" />
-                <span className="leading-relaxed">Mustafa Bey Cad. No 12, Alsancak, İzmir</span>
-              </div>
+          {/* Contact */}
+          <div className="lg:col-span-4">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/40">
+              İletişim
+            </p>
+            <div className="mt-5 space-y-4 text-sm text-white/60">
               <div className="flex items-center gap-3">
-                <Mail size={16} className="shrink-0 text-moss" />
+                <Phone size={15} className="shrink-0 text-olive" />
                 <a
-                  href="mailto:studio@terrapeyzaj.com"
-                  className="transition-colors hover:text-warm-yellow"
+                  href="tel:+905300000000"
+                  className="transition-colors hover:text-white"
                 >
-                  studio@terrapeyzaj.com
+                  +90 530 000 00 00
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Phone size={16} className="shrink-0 text-moss" />
-                <a href="tel:+902320000000" className="transition-colors hover:text-warm-yellow">
-                  +90 232 000 00 00
+                <Mail size={15} className="shrink-0 text-olive" />
+                <a
+                  href="mailto:info@bozpeyzaj.com"
+                  className="transition-colors hover:text-white"
+                >
+                  info@bozpeyzaj.com
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Instagram size={15} className="shrink-0 text-olive" />
+                <a
+                  href="https://instagram.com/bozpeyzaj"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-white"
+                >
+                  @bozpeyzaj
                 </a>
               </div>
             </div>
@@ -96,17 +101,13 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-20 flex flex-col justify-between gap-4 border-t border-offwhite/10 pt-8 sm:flex-row sm:items-center">
-          <p className="text-[11px] uppercase tracking-[0.25em] text-offwhite/40">
-            © {new Date().getFullYear()} TERRA Peyzaj Mimarlığı. Tüm Hakları Saklıdır.
+        <div className="mt-16 flex flex-col justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center">
+          <p className="text-[11px] uppercase tracking-[0.2em] text-white/30">
+            © {new Date().getFullYear()} BOZ PEYZAJ. Tüm Hakları Saklıdır.
           </p>
-          <div className="flex items-center gap-6 text-[11px] uppercase tracking-[0.25em] text-offwhite/40">
-            <span>İzmir</span>
-            <span className="h-1 w-1 rounded-full bg-offwhite/30" />
-            <span>Bodrum</span>
-            <span className="h-1 w-1 rounded-full bg-offwhite/30" />
-            <span>İstanbul</span>
-          </div>
+          <p className="text-[11px] uppercase tracking-[0.2em] text-white/30">
+            Peyzaj Mimarlığı & Dış Mekân Tasarımı
+          </p>
         </div>
       </div>
     </footer>

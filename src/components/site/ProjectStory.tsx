@@ -1,5 +1,6 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import type { MotionValue } from "framer-motion";
 import type { Project } from "@/lib/projects";
 
 function StoryBackgroundItem({
@@ -13,9 +14,13 @@ function StoryBackgroundItem({
   scrollYProgress: MotionValue<number>;
   imgUrl: string;
 }) {
-  const start = (i - 1) / total;
-  const current = i / total;
-  const end = (i + 1) / total;
+  const rawStart = (i - 1) / total;
+  const rawCurrent = i / total;
+  const rawEnd = (i + 1) / total;
+  
+  const start = Math.max(0, Math.min(1, rawStart));
+  const current = Math.max(start, Math.min(1, rawCurrent));
+  const end = Math.max(current, Math.min(1, rawEnd));
 
   const opacity = useTransform(scrollYProgress, [start, current, end], [0, 1, 0]);
   const scale = useTransform(scrollYProgress, [current, end], [1, 1.1]);
@@ -44,9 +49,13 @@ function StoryContentItem({
   total: number;
   scrollYProgress: MotionValue<number>;
 }) {
-  const start = (i - 0.5) / total;
-  const current = i / total;
-  const end = (i + 0.5) / total;
+  const rawStart = (i - 0.5) / total;
+  const rawCurrent = i / total;
+  const rawEnd = (i + 0.5) / total;
+
+  const start = Math.max(0, Math.min(1, rawStart));
+  const current = Math.max(start, Math.min(1, rawCurrent));
+  const end = Math.max(current, Math.min(1, rawEnd));
 
   const opacity = useTransform(scrollYProgress, [start, current, end], [0, 1, 0]);
   const y = useTransform(scrollYProgress, [start, current, end], [50, 0, -50]);
