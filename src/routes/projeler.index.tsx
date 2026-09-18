@@ -1,4 +1,4 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowUpRight, BookOpen, Compass, Filter, Layers, Sparkles } from "lucide-react";
 import { projects } from "@/lib/projects";
@@ -13,15 +13,15 @@ import { TopoContourBackground, GraphicScaleBar } from "@/components/site/Archit
 export const Route = createFileRoute("/projeler/")({
   head: () => ({
     meta: [
-      { title: "Projeler — TERRA Peyzaj Mimarlığı Arşivi & Kataloğu" },
+      { title: "Projeler — BOZ PEYZAJ Arşivi & Kataloğu" },
       {
         name: "description",
         content:
-          "Villa bahçeleri, kamusal parklar, otel avluları ve kentsel açık alanlar: TERRA Peyzaj Mimarlığı proje levhaları, şablonları ve malzeme kartelaları.",
+          "Villa bahçeleri, kamusal parklar, otel avluları ve kentsel açık alanlar: BOZ PEYZAJ proje levhaları, şablonları ve malzeme kartelaları.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "Projeler & Katalog — TERRA Peyzaj Mimarlığı" },
+      { property: "og:title", content: "Projeler & Katalog — BOZ PEYZAJ" },
       {
         property: "og:description",
         content:

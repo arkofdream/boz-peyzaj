@@ -11,7 +11,10 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as HakkimizdaRouteImport } from './routes/hakkimizda'
+import { Route as HizmetlerimizRouteImport } from './routes/hizmetlerimiz'
 import { Route as IletisimRouteImport } from './routes/iletisim'
+import { Route as MisyonumuzRouteImport } from './routes/misyonumuz'
+import { Route as VizyonumuzRouteImport } from './routes/vizyonumuz'
 import { Route as ProjelerIndexRouteImport } from './routes/projeler.index'
 import { Route as ProjelerSlugRouteImport } from './routes/projeler.$slug'
 
@@ -25,9 +28,24 @@ const HakkimizdaRoute = HakkimizdaRouteImport.update({
   path: '/hakkimizda',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HizmetlerimizRoute = HizmetlerimizRouteImport.update({
+  id: '/hizmetlerimiz',
+  path: '/hizmetlerimiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IletisimRoute = IletisimRouteImport.update({
   id: '/iletisim',
   path: '/iletisim',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MisyonumuzRoute = MisyonumuzRouteImport.update({
+  id: '/misyonumuz',
+  path: '/misyonumuz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VizyonumuzRoute = VizyonumuzRouteImport.update({
+  id: '/vizyonumuz',
+  path: '/vizyonumuz',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjelerIndexRoute = ProjelerIndexRouteImport.update({
@@ -44,14 +62,20 @@ const ProjelerSlugRoute = ProjelerSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/hakkimizda': typeof HakkimizdaRoute
+  '/hizmetlerimiz': typeof HizmetlerimizRoute
   '/iletisim': typeof IletisimRoute
+  '/misyonumuz': typeof MisyonumuzRoute
+  '/vizyonumuz': typeof VizyonumuzRoute
   '/projeler/$slug': typeof ProjelerSlugRoute
   '/projeler/': typeof ProjelerIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/hakkimizda': typeof HakkimizdaRoute
+  '/hizmetlerimiz': typeof HizmetlerimizRoute
   '/iletisim': typeof IletisimRoute
+  '/misyonumuz': typeof MisyonumuzRoute
+  '/vizyonumuz': typeof VizyonumuzRoute
   '/projeler/$slug': typeof ProjelerSlugRoute
   '/projeler': typeof ProjelerIndexRoute
 }
@@ -59,21 +83,42 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/hakkimizda': typeof HakkimizdaRoute
+  '/hizmetlerimiz': typeof HizmetlerimizRoute
   '/iletisim': typeof IletisimRoute
+  '/misyonumuz': typeof MisyonumuzRoute
+  '/vizyonumuz': typeof VizyonumuzRoute
   '/projeler/$slug': typeof ProjelerSlugRoute
   '/projeler/': typeof ProjelerIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/hakkimizda' | '/iletisim' | '/projeler/$slug' | '/projeler/'
+    | '/'
+    | '/hakkimizda'
+    | '/hizmetlerimiz'
+    | '/iletisim'
+    | '/misyonumuz'
+    | '/vizyonumuz'
+    | '/projeler/$slug'
+    | '/projeler/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/hakkimizda' | '/iletisim' | '/projeler/$slug' | '/projeler'
+  to:
+    | '/'
+    | '/hakkimizda'
+    | '/hizmetlerimiz'
+    | '/iletisim'
+    | '/misyonumuz'
+    | '/vizyonumuz'
+    | '/projeler/$slug'
+    | '/projeler'
   id:
     | '__root__'
     | '/'
     | '/hakkimizda'
+    | '/hizmetlerimiz'
     | '/iletisim'
+    | '/misyonumuz'
+    | '/vizyonumuz'
     | '/projeler/$slug'
     | '/projeler/'
   fileRoutesById: FileRoutesById
@@ -81,7 +126,10 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   HakkimizdaRoute: typeof HakkimizdaRoute
+  HizmetlerimizRoute: typeof HizmetlerimizRoute
   IletisimRoute: typeof IletisimRoute
+  MisyonumuzRoute: typeof MisyonumuzRoute
+  VizyonumuzRoute: typeof VizyonumuzRoute
   ProjelerSlugRoute: typeof ProjelerSlugRoute
   ProjelerIndexRoute: typeof ProjelerIndexRoute
 }
@@ -102,11 +150,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HakkimizdaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hizmetlerimiz': {
+      id: '/hizmetlerimiz'
+      path: '/hizmetlerimiz'
+      fullPath: '/hizmetlerimiz'
+      preLoaderRoute: typeof HizmetlerimizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/iletisim': {
       id: '/iletisim'
       path: '/iletisim'
       fullPath: '/iletisim'
       preLoaderRoute: typeof IletisimRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/misyonumuz': {
+      id: '/misyonumuz'
+      path: '/misyonumuz'
+      fullPath: '/misyonumuz'
+      preLoaderRoute: typeof MisyonumuzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vizyonumuz': {
+      id: '/vizyonumuz'
+      path: '/vizyonumuz'
+      fullPath: '/vizyonumuz'
+      preLoaderRoute: typeof VizyonumuzRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projeler/': {
@@ -129,20 +198,13 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   HakkimizdaRoute: HakkimizdaRoute,
+  HizmetlerimizRoute: HizmetlerimizRoute,
   IletisimRoute: IletisimRoute,
+  MisyonumuzRoute: MisyonumuzRoute,
+  VizyonumuzRoute: VizyonumuzRoute,
   ProjelerSlugRoute: ProjelerSlugRoute,
   ProjelerIndexRoute: ProjelerIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

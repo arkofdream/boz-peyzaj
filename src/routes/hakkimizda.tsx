@@ -1,4 +1,4 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Compass, Trees, Award } from "lucide-react";
 import studioAsset from "@/assets/studio.jpg.asset.json";
 import { Reveal } from "@/components/site/Reveal";
@@ -13,18 +13,18 @@ import {
 export const Route = createFileRoute("/hakkimizda")({
   head: () => ({
     meta: [
-      { title: "Stüdyo & Yaklaşım — TERRA Peyzaj Mimarlığı" },
+      { title: "Hakkımızda & Yaklaşım — BOZ PEYZAJ" },
       {
         name: "description",
         content:
-          "TERRA, İzmir merkezli peyzaj mimarlığı stüdyosudur. Ekip, ekolojik tasarım yaklaşımı ve 5 adımlı çalışma süreci.",
+          "BOZ PEYZAJ, İzmir merkezli peyzaj mimarlığı stüdyosudur. Ekip, ekolojik tasarım yaklaşımı ve 5 adımlı çalışma süreci.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "Stüdyo — TERRA Peyzaj Mimarlığı" },
+      { property: "og:title", content: "Hakkımızda — BOZ PEYZAJ" },
       {
         property: "og:description",
-        content: "18 yıldır doğayla mimariyi bir araya getiren bağımsız peyzaj mimarlığı stüdyosu.",
+        content: "2010 yılından bu yana doğayla mimariyi bir araya getiren peyzaj mimarlığı stüdyosu.",
       },
     ],
   }),
@@ -96,7 +96,7 @@ function AboutPage() {
         <div className="flex items-center justify-between">
           <span className="inline-flex items-center gap-2 rounded-full border border-moss/30 bg-moss/20 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.3em] text-moss">
             <Sparkles size={12} className="text-primary" />
-            Stüdyo & Felsefe
+            Hakkımızda & Felsefe
           </span>
           <div className="hidden sm:block">
             <GraphicScaleBar />
@@ -114,7 +114,7 @@ function AboutPage() {
           <div className="overflow-hidden rounded-3xl border border-border shadow-2xl">
             <img
               src={studioAsset.url}
-              alt="TERRA peyzaj mimarlığı stüdyosu çalışma ortamı"
+              alt="BOZ PEYZAJ peyzaj mimarlığı stüdyosu çalışma ortamı"
               loading="lazy"
               className="h-[55vh] min-h-[420px] w-full object-cover transition-transform duration-1000 hover:scale-105 lg:h-[72vh]"
             />
@@ -129,13 +129,13 @@ function AboutPage() {
             Kimiz?
           </span>
           <h2 className="font-display text-3xl font-bold text-foreground lg:text-4xl">
-            Doğa ve mimarinin kesişiminde 18 yıl.
+            Doğa ve mimarinin kesişiminde 16 yıl.
           </h2>
         </Reveal>
 
         <Reveal className="space-y-6 lg:col-span-7" delay={100}>
           <p className="font-display text-2xl font-medium leading-[1.4] text-primary sm:text-3xl">
-            2008 yılında kurulan TERRA; peyzaj mimarları, ziraat mühendisleri, botanik danışmanları
+            2010 yılında kurulan BOZ PEYZAJ; peyzaj mimarları, ziraat mühendisleri, botanik danışmanları
             ve saha yöneticilerinden oluşan on kişilik multidisipliner bir tasarım stüdyosudur.
           </p>
           <p className="text-base leading-relaxed text-foreground/75">

@@ -1,7 +1,7 @@
-﻿import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { toast } from "sonner";
-import { MapPin, Mail, Phone, Clock, Send, Sparkles, CheckCircle2 } from "lucide-react";
+import { MapPin, Mail, Phone, Clock, Send, Sparkles, CheckCircle2, MessageCircle, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import {
   BuildingSilhouetteSketch,
@@ -12,15 +12,15 @@ import { TopoContourBackground, GraphicScaleBar } from "@/components/site/Archit
 export const Route = createFileRoute("/iletisim")({
   head: () => ({
     meta: [
-      { title: "İletişim & Proje Talebi — TERRA Peyzaj Mimarlığı" },
+      { title: "İletişim & Proje Talebi — BOZ PEYZAJ" },
       {
         name: "description",
         content:
-          "Yeni peyzaj projeniz, villa bahçeniz veya ticari açık alanınız için TERRA stüdyosuna ulaşın. İzmir merkezli, tüm Türkiye.",
+          "Yeni peyzaj projeniz, villa bahçeniz veya ticari açık alanınız için BOZ PEYZAJ ekibine ulaşın. İzmir merkezli, tüm Türkiye.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "İletişim — TERRA Peyzaj Mimarlığı" },
+      { property: "og:title", content: "İletişim — BOZ PEYZAJ" },
       {
         property: "og:description",
         content: "Projenizi konuşmak ve keşif randevusu almak için bize ulaşın.",
@@ -75,7 +75,7 @@ function ContactPage() {
         {/* Contact Details Card (5 cols) */}
         <Reveal className="lg:col-span-5">
           <div className="space-y-8 rounded-3xl border border-border bg-card/80 p-8 shadow-2xl backdrop-blur-xl sm:p-10">
-            <h2 className="font-display text-2xl font-bold text-foreground">Stüdyo Bilgileri</h2>
+            <h2 className="font-display text-2xl font-bold text-foreground">İletişim Bilgileri</h2>
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
@@ -101,10 +101,10 @@ function ContactPage() {
                     E-posta
                   </p>
                   <a
-                    href="mailto:studio@terrapeyzaj.com"
+                    href="mailto:info@bozpeyzaj.com"
                     className="mt-1 block text-sm font-medium text-primary transition-colors hover:text-terracotta"
                   >
-                    studio@terrapeyzaj.com
+                    info@bozpeyzaj.com
                   </a>
                 </div>
               </div>
@@ -118,10 +118,10 @@ function ContactPage() {
                     Telefon & WhatsApp
                   </p>
                   <a
-                    href="tel:+902320000000"
+                    href="tel:+905300000000"
                     className="mt-1 block text-sm font-medium text-primary transition-colors hover:text-terracotta"
                   >
-                    +90 232 000 00 00
+                    +90 530 000 00 00
                   </a>
                 </div>
               </div>
@@ -212,7 +212,7 @@ function ContactPage() {
                       id="phone"
                       type="tel"
                       required
-                      placeholder="0532 000 00 00"
+                      placeholder="+90 530 000 00 00"
                       className={fieldClass}
                     />
                   </div>
@@ -301,6 +301,38 @@ function ContactPage() {
                 </button>
               </form>
             )}
+          </div>
+        </Reveal>
+      </section>
+
+      {/* WhatsApp CTA Section */}
+      <section className="relative z-10 mx-auto max-w-[1400px] px-6 pb-24 lg:px-10 lg:pb-32">
+        <Reveal>
+          <div className="relative overflow-hidden rounded-3xl border border-border bg-card/80 p-8 shadow-2xl backdrop-blur-xl md:p-12">
+            <div className="flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
+              <div className="space-y-2">
+                <div className="inline-flex items-center gap-2 rounded-full border border-moss/30 bg-moss/20 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.3em] text-moss">
+                  <MessageCircle size={12} className="text-primary" />
+                  Hızlı İletişim
+                </div>
+                <h3 className="font-display text-2xl font-bold text-foreground sm:text-3xl">
+                  Doğrudan WhatsApp'tan Ulaşın
+                </h3>
+                <p className="max-w-xl text-sm text-foreground/75">
+                  Projeniz hakkında hızlı bilgi almak, fotoğraf veya arazi krokisi paylaşmak için WhatsApp hattımızdan bize anında yazabilirsiniz.
+                </p>
+              </div>
+              <a
+                href="https://wa.me/905300000000?text=Merhaba%2C%20peyzaj%20projem%20i%C3%A7in%20bilgi%20almak%20istiyorum."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 rounded-full bg-forest px-8 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-primary shadow-xl transition-all duration-300 hover:bg-forest/80 hover:shadow-2xl shrink-0"
+              >
+                <MessageCircle size={16} />
+                <span>WhatsApp ile Yazın</span>
+                <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
           </div>
         </Reveal>
       </section>

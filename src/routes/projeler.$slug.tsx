@@ -29,13 +29,13 @@ export const Route = createFileRoute("/projeler/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Proje Bulunamadı — TERRA Peyzaj" },
+          { title: "Proje Bulunamadı — BOZ PEYZAJ" },
           { name: "robots", content: "noindex" },
         ],
       };
     }
     const p = loaderData.project;
-    const title = `${p.title} — TERRA Peyzaj Mimarlığı`;
+    const title = `${p.title} — BOZ PEYZAJ`;
     return {
       meta: [
         { title },

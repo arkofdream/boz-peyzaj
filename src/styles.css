@@ -27,6 +27,8 @@
   --color-device-highlight: var(--device-highlight);
   --color-device-silver: var(--device-silver);
   --color-on-image: var(--on-image);
+  --color-olive: var(--olive);
+  --color-stone: var(--stone);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -52,59 +54,61 @@
 
 :root {
   --radius: 0.75rem;
-  --background: oklch(0.97 0.018 92);
-  --foreground: oklch(0.27 0.035 151);
-  --card: oklch(0.995 0.008 90);
-  --card-foreground: oklch(0.27 0.035 151);
-  --popover: oklch(0.995 0.008 90);
-  --popover-foreground: oklch(0.27 0.035 151);
-  --primary: oklch(0.42 0.09 150);
-  --primary-foreground: oklch(0.985 0.01 90);
-  --secondary: oklch(0.92 0.035 126);
-  --secondary-foreground: oklch(0.31 0.06 148);
-  --muted: oklch(0.93 0.018 90);
-  --muted-foreground: oklch(0.48 0.03 145);
-  --accent: oklch(0.62 0.145 42);
-  --accent-foreground: oklch(0.99 0.008 90);
-  --destructive: oklch(0.55 0.2 26);
-  --destructive-foreground: oklch(0.99 0.008 90);
-  --border: oklch(0.83 0.03 116);
-  --input: oklch(0.87 0.025 110);
-  --ring: oklch(0.52 0.09 150);
-  --forest: oklch(0.42 0.09 150);
-  --moss: oklch(0.57 0.1 130);
-  --terracotta: oklch(0.62 0.145 42);
-  --sand: oklch(0.91 0.045 88);
-  --warm-yellow: oklch(0.76 0.13 80);
-  --anthracite: oklch(0.23 0.025 155);
-  --offwhite: oklch(0.985 0.01 90);
-  --on-image: oklch(0.995 0.004 90);
-  --device-edge: oklch(0.5 0.015 155);
-  --device-highlight: oklch(0.43 0.015 155);
-  --device-silver: oklch(0.68 0.012 155);
-  --shadow-device: 0 25px 60px -15px oklch(0.2 0.02 155 / 0.45);
+  --background: #FAFAF8;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+  --primary: #2D3A2E;
+  --primary-foreground: #F5F5F0;
+  --secondary: #F0EDE8;
+  --secondary-foreground: #2D3A2E;
+  --muted: #F0EDE8;
+  --muted-foreground: #6B7280;
+  --accent: #A6A182;
+  --accent-foreground: #FFFFFF;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E2DD;
+  --input: #E5E2DD;
+  --ring: #2D3A2E;
+  --forest: #2D3A2E;
+  --moss: #4A6B4E;
+  --terracotta: #B8734A;
+  --sand: #E8DFD0;
+  --warm-yellow: #C4A965;
+  --anthracite: #1A1A1A;
+  --offwhite: #F5F5F0;
+  --olive: #A6A182;
+  --stone: #8B8680;
+  --on-image: #FFFFFF;
+  --device-edge: #3A3A3A;
+  --device-highlight: #2A2A2A;
+  --device-silver: #5A5A5A;
+  --shadow-device: 0 25px 60px -15px rgba(0, 0, 0, 0.35);
 }
 
 .dark {
-  --background: oklch(0.97 0.018 92);
-  --foreground: oklch(0.27 0.035 151);
-  --card: oklch(0.995 0.008 90);
-  --card-foreground: oklch(0.27 0.035 151);
-  --popover: oklch(0.995 0.008 90);
-  --popover-foreground: oklch(0.27 0.035 151);
-  --primary: oklch(0.42 0.09 150);
-  --primary-foreground: oklch(0.985 0.01 90);
-  --secondary: oklch(0.92 0.035 126);
-  --secondary-foreground: oklch(0.31 0.06 148);
-  --muted: oklch(0.93 0.018 90);
-  --muted-foreground: oklch(0.48 0.03 145);
-  --accent: oklch(0.62 0.145 42);
-  --accent-foreground: oklch(0.99 0.008 90);
-  --destructive: oklch(0.55 0.2 26);
-  --destructive-foreground: oklch(0.99 0.008 90);
-  --border: oklch(0.83 0.03 116);
-  --input: oklch(0.87 0.025 110);
-  --ring: oklch(0.52 0.09 150);
+  --background: #0F0F0F;
+  --foreground: #F5F5F0;
+  --card: #1A1A1A;
+  --card-foreground: #F5F5F0;
+  --popover: #1A1A1A;
+  --popover-foreground: #F5F5F0;
+  --primary: #A6A182;
+  --primary-foreground: #1A1A1A;
+  --secondary: #2A2A2A;
+  --secondary-foreground: #F5F5F0;
+  --muted: #2A2A2A;
+  --muted-foreground: #9CA3AF;
+  --accent: #A6A182;
+  --accent-foreground: #1A1A1A;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #333333;
+  --input: #333333;
+  --ring: #A6A182;
 }
 
 @layer base {
@@ -135,16 +139,52 @@
   h5,
   h6 {
     font-family: var(--font-display);
-    letter-spacing: 0;
+    letter-spacing: -0.02em;
   }
 }
 
-.image-tone {
-  --foreground: var(--offwhite);
-  --primary: var(--sand);
+/* Premium grid pattern */
+.pattern-overlay {
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px
+    );
+  background-size: 4rem 4rem;
 }
 
-/* Rich Architectural Gradients & Croquis Patterns */
+/* Subtle dot grid */
+.croquis-dots {
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0.08) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+}
+
+/* Architectural grid */
+.croquis-grid {
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05) 1px,
+      transparent 1px
+    );
+  background-size: 3rem 3rem;
+}
+
+/* Gradient utilities */
 .bg-grad-architectural {
   background: linear-gradient(155deg, var(--background), var(--secondary), var(--background));
 }
@@ -153,36 +193,7 @@
   background: linear-gradient(135deg, var(--secondary), var(--card), var(--secondary));
 }
 
-.bg-grad-emerald {
-  background: linear-gradient(140deg, var(--background), var(--secondary), var(--card));
-}
-
-.bg-grad-glow {
-  background: radial-gradient(ellipse at 50% 0%, color-mix(in oklab, var(--moss) 28%, transparent) 0%, transparent 70%);
-}
-
-.bg-grad-terracotta-glow {
-  background: radial-gradient(circle at 80% 20%, color-mix(in oklab, var(--terracotta) 20%, transparent) 0%, transparent 60%);
-}
-
-.bg-grad-card {
-  background: linear-gradient(180deg, var(--card), var(--secondary));
-}
-
-/* Blueprint & Croquis Grid Overlays */
-.croquis-grid {
-  background-image:
-    linear-gradient(to right, color-mix(in oklab, var(--primary) 10%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in oklab, var(--primary) 10%, transparent) 1px, transparent 1px);
-  background-size: 3rem 3rem;
-}
-
-.croquis-dots {
-  background-image: radial-gradient(color-mix(in oklab, var(--primary) 18%, transparent) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-
-/* Architectural & Organic Shapes */
+/* Organic shapes */
 .organic-shape-1 {
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
 }
@@ -191,35 +202,8 @@
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
-.curved-edge-b {
-  border-bottom-left-radius: 3rem;
-  border-bottom-right-radius: 3rem;
-}
-
-.curved-edge-t {
-  border-top-left-radius: 3rem;
-  border-top-right-radius: 3rem;
-}
-
-@media (min-width: 1024px) {
-  .curved-edge-b {
-    border-bottom-left-radius: 6rem;
-    border-bottom-right-radius: 6rem;
-  }
-  .curved-edge-t {
-    border-top-left-radius: 6rem;
-    border-top-right-radius: 6rem;
-  }
-}
-
-.bg-grain {
-  background-image: radial-gradient(color-mix(in oklab, var(--primary) 14%, transparent) 1px, transparent 0);
-  background-size: 24px 24px;
-}
-
-.pattern-overlay {
-  background-image:
-    linear-gradient(to right, color-mix(in oklab, var(--primary) 7%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in oklab, var(--primary) 7%, transparent) 1px, transparent 1px);
-  background-size: 3rem 3rem;
+/* Section divider line */
+.section-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
 }
